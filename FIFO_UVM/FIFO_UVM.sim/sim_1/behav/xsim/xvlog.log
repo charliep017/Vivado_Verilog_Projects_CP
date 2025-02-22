@@ -1,0 +1,18 @@
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "H:/Vivado_fpga/PROJECTS/FIFO_UVM/FIFO_UVM.srcs/sim_1/new/fifo_test_pkg.sv" into library xil_defaultlib
+WARNING: [VRFC 10-3381] ignoring re-definition of command line macro 'UVM_NO_DPI' [H:/Vivado_fpga/PROJECTS/FIFO_UVM/FIFO_UVM.srcs/sim_1/new/fifo_test_pkg.sv:5]
+WARNING: [VRFC 10-3381] ignoring re-definition of command line macro 'UVM_NO_XML_PARSER' [H:/Vivado_fpga/PROJECTS/FIFO_UVM/FIFO_UVM.srcs/sim_1/new/fifo_test_pkg.sv:6]
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "H:/Vivado_fpga/PROJECTS/FIFO_UVM/FIFO_UVM.srcs/sim_1/new/fifo_test.sv" into library xil_defaultlib
+WARNING: [VRFC 10-3609] overwriting previous definition of package 'uvm_pkg' [C:/Xilinx/Vivado/2024.2/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv:4356]
+WARNING: [VRFC 10-3669] re-analyze package 'fifo_test_pkg' since package 'uvm_pkg' is overwritten or removed [H:/Vivado_fpga/PROJECTS/FIFO_UVM/FIFO_UVM.srcs/sim_1/new/fifo_test_pkg.sv:8]
+WARNING: [VRFC 10-3669] re-analyze package 'fifo_pkg' since package 'uvm_pkg' is overwritten or removed [H:/Vivado_fpga/PROJECTS/FIFO_UVM/FIFO_UVM.srcs/sim_1/new/fifo_pkg.sv:8]
+WARNING: [VRFC 10-3381] ignoring re-definition of command line macro 'UVM_NO_DPI' [H:/Vivado_fpga/PROJECTS/FIFO_UVM/FIFO_UVM.srcs/sim_1/new/fifo_pkg.sv:6]
+WARNING: [VRFC 10-3381] ignoring re-definition of command line macro 'UVM_NO_XML_PARSER' [H:/Vivado_fpga/PROJECTS/FIFO_UVM/FIFO_UVM.srcs/sim_1/new/fifo_pkg.sv:7]
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "H:/Vivado_fpga/PROJECTS/FIFO_UVM/FIFO_UVM.srcs/sim_1/new/fifo_pkg.sv" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "H:/Vivado_fpga/PROJECTS/FIFO_UVM/FIFO_UVM.srcs/sim_1/new/sync_fifo.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sync_fifo
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "H:/Vivado_fpga/PROJECTS/FIFO_UVM/FIFO_UVM.srcs/sim_1/new/fifo_tb_top.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sync_fifo
+WARNING: [VRFC 10-3609] overwriting previous definition of module 'sync_fifo' [H:/Vivado_fpga/PROJECTS/FIFO_UVM/FIFO_UVM.srcs/sim_1/new/sync_fifo.sv:2]
+WARNING: [VRFC 10-3381] ignoring re-definition of command line macro 'UVM_NO_DPI' [H:/Vivado_fpga/PROJECTS/FIFO_UVM/FIFO_UVM.srcs/sim_1/new/fifo_tb_top.sv:7]
+WARNING: [VRFC 10-3381] ignoring re-definition of command line macro 'UVM_NO_XML_PARSER' [H:/Vivado_fpga/PROJECTS/FIFO_UVM/FIFO_UVM.srcs/sim_1/new/fifo_tb_top.sv:8]
+INFO: [VRFC 10-311] analyzing module fifo_tb_top

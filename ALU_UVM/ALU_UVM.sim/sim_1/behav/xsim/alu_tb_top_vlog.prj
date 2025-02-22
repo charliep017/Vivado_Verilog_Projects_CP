@@ -1,0 +1,11 @@
+# compile verilog/system verilog design source files
+sv xil_defaultlib  -i "C:/Xilinx/Vivado/2024.2/data/system_verilog/uvm_1.2" \
+"../../../../ALU_UVM.srcs/sim_1/new/alu_if.sv" \
+"../../../../ALU_UVM.srcs/sim_1/new/alu_pkg.sv" \
+"../../../../ALU_UVM.srcs/sim_1/new/alu_tb_top.sv" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

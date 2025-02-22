@@ -1,0 +1,4 @@
+Time resolution is 1 ps
+TEST PASSED: Address 1 matches DEADBEEF.
+TEST PASSED: Address 2 matches CAFEBEEF.
+$finish called at time : 155 ns : File "H:/Vivado_fpga/PROJECTS/MemoryController/MemoryController.srcs/sim_1/new/tb_MemoryController.v" Line 97

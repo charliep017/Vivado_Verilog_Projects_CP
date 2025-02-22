@@ -1,0 +1,702 @@
+#-----------------------------------------------------------
+# Vivado v2024.2 (64-bit)
+# SW Build 5239630 on Fri Nov 08 22:35:27 MST 2024
+# IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
+# SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
+# Start of session at: Fri Feb  7 22:03:48 2025
+# Process ID         : 25632
+# Current directory  : H:/Vivado_fpga/PROJECTS/FIFO_UVM
+# Command line       : vivado.exe -gui_launcher_event rodinguilauncherevent8776 H:\Vivado_fpga\PROJECTS\FIFO_UVM\FIFO_UVM.xpr
+# Log file           : H:/Vivado_fpga/PROJECTS/FIFO_UVM/vivado.log
+# Journal file       : H:/Vivado_fpga/PROJECTS/FIFO_UVM\vivado.jou
+# Running On         : DESKTOP-K6AEKB4
+# Platform           : Windows Server 2016 or Windows 10
+# Operating System   : 19045
+# Processor Detail   : 12th Gen Intel(R) Core(TM) i9-12900K
+# CPU Frequency      : 3187 MHz
+# CPU Physical cores : 16
+# CPU Logical cores  : 24
+# Host memory        : 34141 MB
+# Swap memory        : 8589 MB
+# Total Virtual      : 42731 MB
+# Available Virtual  : 16495 MB
+#-----------------------------------------------------------
+start_gui
+open_project H:/Vivado_fpga/PROJECTS/FIFO_UVM/FIFO_UVM.xpr
+INFO: [filemgmt 56-3] Default IP Output Path : Could not find the directory 'H:/Vivado_fpga/PROJECTS/FIFO_UVM/FIFO_UVM.gen/sources_1'.
+CRITICAL WARNING: [Project 1-19] Could not find the file 'H:/Vivado_fpga/PROJECTS/FIFO_UVM/FIFO_UVM.srcs/sim_1/new/fifo_test_case.sv'.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2024.2/data/ip'.
+update_compile_order -fileset sources_1
+export_ip_user_files -of_objects  [get_files H:/Vivado_fpga/PROJECTS/FIFO_UVM/FIFO_UVM.srcs/sim_1/new/fifo_test_case.sv] -no_script -reset -force -quiet
+remove_files  -fileset sim_1 H:/Vivado_fpga/PROJECTS/FIFO_UVM/FIFO_UVM.srcs/sim_1/new/fifo_test_case.sv
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'fifo_tb_top'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'H:/Vivado_fpga/PROJECTS/FIFO_UVM/FIFO_UVM.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/Vivado/2024.2/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'fifo_tb_top' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'H:/Vivado_fpga/PROJECTS/FIFO_UVM/FIFO_UVM.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L uvm -L uvm --define UVM_NO_DPI --define UVM_NO_XML_PARSER -prj fifo_tb_top_vlog.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'H:/Vivado_fpga/PROJECTS/FIFO_UVM/FIFO_UVM.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip --snapshot fifo_tb_top_behav xil_defaultlib.fifo_tb_top xil_defaultlib.glbl -log elaborate.log -L uvm"
+Vivado Simulator v2024.2.0
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2024.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip --snapshot fifo_tb_top_behav xil_defaultlib.fifo_tb_top xil_defaultlib.glbl -log elaborate.log -L uvm 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '4' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'H:/Vivado_fpga/PROJECTS/FIFO_UVM/FIFO_UVM.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "fifo_tb_top_behav -key {Behavioral:sim_1:Functional:fifo_tb_top} -tclbatch {fifo_tb_top.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+source fifo_tb_top.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 100000ns
+UVM_INFO C:/Xilinx/Vivado/2024.2/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv(18601) @ 0: reporter [UVM/RELNOTES] 
+----------------------------------------------------------------
+UVM-1.2
+(C) 2007-2014 Mentor Graphics Corporation
+(C) 2007-2014 Cadence Design Systems, Inc.
+(C) 2006-2014 Synopsys, Inc.
+(C) 2011-2013 Cypress Semiconductor Corp.
+(C) 2013-2014 NVIDIA Corporation
+----------------------------------------------------------------
+
+  ***********       IMPORTANT RELEASE NOTES         ************
+
+  You are using a version of the UVM library that has been compiled
+  with `UVM_NO_DEPRECATED undefined.
+
+  You are using a version of the UVM library that has been compiled
+  with `UVM_OBJECT_DO_NOT_NEED_CONSTRUCTOR undefined.
+
+      (Specify +UVM_NO_RELNOTES to turn off this notice)
+
+UVM_WARNING @ 0: reporter [TPRGED] Type name 'fifo_base_test' already registered with factory. No string-based lookup support for multiple types with the same type name.
+UVM_WARNING @ 0: reporter [TPRGED] Type name 'fifo_write_read_test' already registered with factory. No string-based lookup support for multiple types with the same type name.
+UVM_WARNING @ 0: reporter [TPRGED] Type name 'fifo_random_test' already registered with factory. No string-based lookup support for multiple types with the same type name.
+UVM_WARNING @ 0: reporter [TPRGED] Type name 'fifo_sequence' already registered with factory. No string-based lookup support for multiple types with the same type name.
+UVM_WARNING @ 0: reporter [TPRGED] Type name 'fifo_write_read_seq' already registered with factory. No string-based lookup support for multiple types with the same type name.
+UVM_WARNING @ 0: reporter [TPRGED] Type name 'fifo_full_empty_seq' already registered with factory. No string-based lookup support for multiple types with the same type name.
+UVM_WARNING @ 0: reporter [TPRGED] Type name 'fifo_random_seq' already registered with factory. No string-based lookup support for multiple types with the same type name.
+UVM_INFO @ 0: reporter [RNTST] Running test fifo_random_test...
+UVM_INFO C:/Xilinx/Vivado/2024.2/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv(20867) @ 0: reporter [UVM/COMP/NAMECHECK] This implementation of the component name checks requires DPI to be enabled
+Time=0 rst_n=0 wr_en=x rd_en=x wr_data=xxxxxxxx rd_data=xxxxxxxx full=0 empty=1
+Time=5000 rst_n=0 wr_en=1 rd_en=0 wr_data=daace7a3 rd_data=xxxxxxxx full=0 empty=1
+Time=15000 rst_n=0 wr_en=0 rd_en=0 wr_data=daace7a3 rd_data=daace7a3 full=0 empty=1
+Time=35000 rst_n=0 wr_en=0 rd_en=1 wr_data=daace7a3 rd_data=daace7a3 full=0 empty=1
+Time=45000 rst_n=0 wr_en=0 rd_en=0 wr_data=daace7a3 rd_data=daace7a3 full=0 empty=1
+Time=50000 rst_n=1 wr_en=0 rd_en=0 wr_data=daace7a3 rd_data=daace7a3 full=0 empty=1
+Time=65000 rst_n=1 wr_en=0 rd_en=1 wr_data=daace7a3 rd_data=daace7a3 full=0 empty=1
+Time=75000 rst_n=1 wr_en=0 rd_en=0 wr_data=daace7a3 rd_data=daace7a3 full=0 empty=1
+Time=95000 rst_n=1 wr_en=0 rd_en=1 wr_data=daace7a3 rd_data=daace7a3 full=0 empty=1
+Time=105000 rst_n=1 wr_en=0 rd_en=0 wr_data=daace7a3 rd_data=daace7a3 full=0 empty=1
+Time=125000 rst_n=1 wr_en=0 rd_en=1 wr_data=daace7a3 rd_data=daace7a3 full=0 empty=1
+Time=135000 rst_n=1 wr_en=0 rd_en=0 wr_data=daace7a3 rd_data=daace7a3 full=0 empty=1
+Time=155000 rst_n=1 wr_en=0 rd_en=1 wr_data=daace7a3 rd_data=daace7a3 full=0 empty=1
+Time=165000 rst_n=1 wr_en=0 rd_en=0 wr_data=daace7a3 rd_data=daace7a3 full=0 empty=1
+Time=185000 rst_n=1 wr_en=1 rd_en=0 wr_data=ce0dc61e rd_data=daace7a3 full=0 empty=1
+Time=195000 rst_n=1 wr_en=0 rd_en=0 wr_data=ce0dc61e rd_data=ce0dc61e full=0 empty=0
+Time=215000 rst_n=1 wr_en=1 rd_en=0 wr_data=1f2e1048 rd_data=ce0dc61e full=0 empty=0
+Time=225000 rst_n=1 wr_en=0 rd_en=0 wr_data=1f2e1048 rd_data=ce0dc61e full=0 empty=0
+Time=245000 rst_n=1 wr_en=1 rd_en=0 wr_data=9752f737 rd_data=ce0dc61e full=0 empty=0
+Time=255000 rst_n=1 wr_en=0 rd_en=0 wr_data=9752f737 rd_data=ce0dc61e full=0 empty=0
+Time=275000 rst_n=1 wr_en=1 rd_en=0 wr_data=f67c7b1a rd_data=ce0dc61e full=0 empty=0
+Time=285000 rst_n=1 wr_en=0 rd_en=0 wr_data=f67c7b1a rd_data=ce0dc61e full=0 empty=0
+Time=305000 rst_n=1 wr_en=0 rd_en=1 wr_data=f67c7b1a rd_data=ce0dc61e full=0 empty=0
+Time=315000 rst_n=1 wr_en=0 rd_en=0 wr_data=f67c7b1a rd_data=1f2e1048 full=0 empty=0
+Time=335000 rst_n=1 wr_en=1 rd_en=0 wr_data=a9dd5983 rd_data=1f2e1048 full=0 empty=0
+Time=345000 rst_n=1 wr_en=0 rd_en=0 wr_data=a9dd5983 rd_data=1f2e1048 full=0 empty=0
+Time=365000 rst_n=1 wr_en=1 rd_en=0 wr_data=fe14b40c rd_data=1f2e1048 full=0 empty=0
+Time=375000 rst_n=1 wr_en=0 rd_en=0 wr_data=fe14b40c rd_data=1f2e1048 full=0 empty=0
+Time=395000 rst_n=1 wr_en=1 rd_en=0 wr_data=f950ab62 rd_data=1f2e1048 full=0 empty=0
+Time=405000 rst_n=1 wr_en=0 rd_en=0 wr_data=f950ab62 rd_data=1f2e1048 full=0 empty=0
+Time=425000 rst_n=1 wr_en=1 rd_en=0 wr_data=db913fab rd_data=1f2e1048 full=0 empty=0
+Time=435000 rst_n=1 wr_en=0 rd_en=0 wr_data=db913fab rd_data=1f2e1048 full=0 empty=0
+Time=455000 rst_n=1 wr_en=1 rd_en=0 wr_data=24d670da rd_data=1f2e1048 full=0 empty=0
+Time=465000 rst_n=1 wr_en=0 rd_en=0 wr_data=24d670da rd_data=1f2e1048 full=0 empty=0
+Time=485000 rst_n=1 wr_en=1 rd_en=0 wr_data=d5203ec7 rd_data=1f2e1048 full=0 empty=0
+Time=495000 rst_n=1 wr_en=0 rd_en=0 wr_data=d5203ec7 rd_data=1f2e1048 full=0 empty=0
+Time=515000 rst_n=1 wr_en=1 rd_en=0 wr_data=ec6ea9cd rd_data=1f2e1048 full=0 empty=0
+Time=525000 rst_n=1 wr_en=0 rd_en=0 wr_data=ec6ea9cd rd_data=1f2e1048 full=0 empty=0
+Time=545000 rst_n=1 wr_en=0 rd_en=1 wr_data=ec6ea9cd rd_data=1f2e1048 full=0 empty=0
+Time=555000 rst_n=1 wr_en=0 rd_en=0 wr_data=ec6ea9cd rd_data=9752f737 full=0 empty=0
+Time=575000 rst_n=1 wr_en=1 rd_en=0 wr_data=d019561e rd_data=9752f737 full=0 empty=0
+Time=585000 rst_n=1 wr_en=0 rd_en=0 wr_data=d019561e rd_data=9752f737 full=0 empty=0
+Time=605000 rst_n=1 wr_en=1 rd_en=0 wr_data=9c7597a4 rd_data=9752f737 full=0 empty=0
+Time=615000 rst_n=1 wr_en=0 rd_en=0 wr_data=9c7597a4 rd_data=9752f737 full=0 empty=0
+Time=635000 rst_n=1 wr_en=1 rd_en=0 wr_data=fd67620 rd_data=9752f737 full=0 empty=0
+Time=645000 rst_n=1 wr_en=0 rd_en=0 wr_data=fd67620 rd_data=9752f737 full=0 empty=0
+Time=665000 rst_n=1 wr_en=0 rd_en=1 wr_data=fd67620 rd_data=9752f737 full=0 empty=0
+Time=675000 rst_n=1 wr_en=0 rd_en=0 wr_data=fd67620 rd_data=f67c7b1a full=0 empty=0
+Time=695000 rst_n=1 wr_en=1 rd_en=0 wr_data=aba609a5 rd_data=f67c7b1a full=0 empty=0
+Time=705000 rst_n=1 wr_en=0 rd_en=0 wr_data=aba609a5 rd_data=f67c7b1a full=0 empty=0
+Time=725000 rst_n=1 wr_en=1 rd_en=0 wr_data=d414bea1 rd_data=f67c7b1a full=0 empty=0
+Time=735000 rst_n=1 wr_en=0 rd_en=0 wr_data=d414bea1 rd_data=f67c7b1a full=0 empty=0
+Time=755000 rst_n=1 wr_en=1 rd_en=0 wr_data=e388106e rd_data=f67c7b1a full=0 empty=0
+Time=765000 rst_n=1 wr_en=0 rd_en=0 wr_data=e388106e rd_data=f67c7b1a full=0 empty=0
+Time=785000 rst_n=1 wr_en=0 rd_en=1 wr_data=e388106e rd_data=f67c7b1a full=0 empty=0
+Time=795000 rst_n=1 wr_en=0 rd_en=0 wr_data=e388106e rd_data=a9dd5983 full=0 empty=0
+Time=815000 rst_n=1 wr_en=1 rd_en=0 wr_data=f77c8ad5 rd_data=a9dd5983 full=0 empty=0
+Time=825000 rst_n=1 wr_en=0 rd_en=0 wr_data=f77c8ad5 rd_data=a9dd5983 full=0 empty=0
+Time=845000 rst_n=1 wr_en=1 rd_en=0 wr_data=fbfdb36b rd_data=a9dd5983 full=0 empty=0
+Time=855000 rst_n=1 wr_en=0 rd_en=0 wr_data=fbfdb36b rd_data=a9dd5983 full=0 empty=0
+Time=875000 rst_n=1 wr_en=1 rd_en=0 wr_data=278378e3 rd_data=a9dd5983 full=0 empty=0
+Time=885000 rst_n=1 wr_en=0 rd_en=0 wr_data=278378e3 rd_data=a9dd5983 full=1 empty=0
+Time=905000 rst_n=1 wr_en=0 rd_en=1 wr_data=278378e3 rd_data=a9dd5983 full=1 empty=0
+Time=915000 rst_n=1 wr_en=0 rd_en=0 wr_data=278378e3 rd_data=fe14b40c full=0 empty=0
+Time=935000 rst_n=1 wr_en=0 rd_en=1 wr_data=278378e3 rd_data=fe14b40c full=0 empty=0
+Time=945000 rst_n=1 wr_en=0 rd_en=0 wr_data=278378e3 rd_data=f950ab62 full=0 empty=0
+Time=965000 rst_n=1 wr_en=1 rd_en=0 wr_data=d4307646 rd_data=f950ab62 full=0 empty=0
+Time=975000 rst_n=1 wr_en=0 rd_en=0 wr_data=d4307646 rd_data=f950ab62 full=0 empty=0
+Time=995000 rst_n=1 wr_en=0 rd_en=1 wr_data=d4307646 rd_data=f950ab62 full=0 empty=0
+Time=1005000 rst_n=1 wr_en=0 rd_en=0 wr_data=d4307646 rd_data=db913fab full=0 empty=0
+Time=1025000 rst_n=1 wr_en=0 rd_en=1 wr_data=d4307646 rd_data=db913fab full=0 empty=0
+Time=1035000 rst_n=1 wr_en=0 rd_en=0 wr_data=d4307646 rd_data=24d670da full=0 empty=0
+Time=1055000 rst_n=1 wr_en=1 rd_en=0 wr_data=a006f7a2 rd_data=24d670da full=0 empty=0
+Time=1065000 rst_n=1 wr_en=0 rd_en=0 wr_data=a006f7a2 rd_data=24d670da full=0 empty=0
+Time=1085000 rst_n=1 wr_en=1 rd_en=0 wr_data=dcad0745 rd_data=24d670da full=0 empty=0
+Time=1095000 rst_n=1 wr_en=0 rd_en=0 wr_data=dcad0745 rd_data=24d670da full=0 empty=0
+Time=1115000 rst_n=1 wr_en=0 rd_en=1 wr_data=dcad0745 rd_data=24d670da full=0 empty=0
+Time=1125000 rst_n=1 wr_en=0 rd_en=0 wr_data=dcad0745 rd_data=d5203ec7 full=0 empty=0
+Time=1145000 rst_n=1 wr_en=0 rd_en=1 wr_data=dcad0745 rd_data=d5203ec7 full=0 empty=0
+Time=1155000 rst_n=1 wr_en=0 rd_en=0 wr_data=dcad0745 rd_data=ec6ea9cd full=0 empty=0
+Time=1175000 rst_n=1 wr_en=0 rd_en=1 wr_data=dcad0745 rd_data=ec6ea9cd full=0 empty=0
+Time=1185000 rst_n=1 wr_en=0 rd_en=0 wr_data=dcad0745 rd_data=d019561e full=0 empty=0
+Time=1205000 rst_n=1 wr_en=0 rd_en=1 wr_data=dcad0745 rd_data=d019561e full=0 empty=0
+Time=1215000 rst_n=1 wr_en=0 rd_en=0 wr_data=dcad0745 rd_data=9c7597a4 full=0 empty=0
+Time=1235000 rst_n=1 wr_en=0 rd_en=1 wr_data=dcad0745 rd_data=9c7597a4 full=0 empty=0
+Time=1245000 rst_n=1 wr_en=0 rd_en=0 wr_data=dcad0745 rd_data=fd67620 full=0 empty=0
+Time=1265000 rst_n=1 wr_en=0 rd_en=1 wr_data=dcad0745 rd_data=fd67620 full=0 empty=0
+Time=1275000 rst_n=1 wr_en=0 rd_en=0 wr_data=dcad0745 rd_data=aba609a5 full=0 empty=0
+Time=1295000 rst_n=1 wr_en=1 rd_en=0 wr_data=c9b89c8e rd_data=aba609a5 full=0 empty=0
+Time=1305000 rst_n=1 wr_en=0 rd_en=0 wr_data=c9b89c8e rd_data=aba609a5 full=0 empty=0
+Time=1325000 rst_n=1 wr_en=0 rd_en=1 wr_data=c9b89c8e rd_data=aba609a5 full=0 empty=0
+Time=1335000 rst_n=1 wr_en=0 rd_en=0 wr_data=c9b89c8e rd_data=d414bea1 full=0 empty=0
+Time=1355000 rst_n=1 wr_en=1 rd_en=0 wr_data=1a53268e rd_data=d414bea1 full=0 empty=0
+Time=1365000 rst_n=1 wr_en=0 rd_en=0 wr_data=1a53268e rd_data=d414bea1 full=0 empty=0
+Time=1385000 rst_n=1 wr_en=0 rd_en=1 wr_data=1a53268e rd_data=d414bea1 full=0 empty=0
+Time=1395000 rst_n=1 wr_en=0 rd_en=0 wr_data=1a53268e rd_data=e388106e full=0 empty=0
+Time=1415000 rst_n=1 wr_en=0 rd_en=1 wr_data=1a53268e rd_data=e388106e full=0 empty=0
+Time=1425000 rst_n=1 wr_en=0 rd_en=0 wr_data=1a53268e rd_data=f77c8ad5 full=0 empty=0
+Time=1445000 rst_n=1 wr_en=1 rd_en=0 wr_data=d7dd8e1f rd_data=f77c8ad5 full=0 empty=0
+Time=1455000 rst_n=1 wr_en=0 rd_en=0 wr_data=d7dd8e1f rd_data=f77c8ad5 full=0 empty=0
+Time=1475000 rst_n=1 wr_en=0 rd_en=1 wr_data=d7dd8e1f rd_data=f77c8ad5 full=0 empty=0
+Time=1485000 rst_n=1 wr_en=0 rd_en=0 wr_data=d7dd8e1f rd_data=fbfdb36b full=0 empty=0
+Time=1505000 rst_n=1 wr_en=1 rd_en=0 wr_data=2ea638dd rd_data=fbfdb36b full=0 empty=0
+Time=1515000 rst_n=1 wr_en=0 rd_en=0 wr_data=2ea638dd rd_data=fbfdb36b full=0 empty=0
+Time=1535000 rst_n=1 wr_en=0 rd_en=1 wr_data=2ea638dd rd_data=fbfdb36b full=0 empty=0
+Time=1545000 rst_n=1 wr_en=0 rd_en=0 wr_data=2ea638dd rd_data=278378e3 full=0 empty=0
+Time=1565000 rst_n=1 wr_en=0 rd_en=1 wr_data=2ea638dd rd_data=278378e3 full=0 empty=0
+Time=1575000 rst_n=1 wr_en=0 rd_en=0 wr_data=2ea638dd rd_data=d4307646 full=0 empty=0
+Time=1595000 rst_n=1 wr_en=0 rd_en=1 wr_data=2ea638dd rd_data=d4307646 full=0 empty=0
+Time=1605000 rst_n=1 wr_en=0 rd_en=0 wr_data=2ea638dd rd_data=a006f7a2 full=0 empty=0
+Time=1625000 rst_n=1 wr_en=1 rd_en=0 wr_data=306ee8c2 rd_data=a006f7a2 full=0 empty=0
+Time=1635000 rst_n=1 wr_en=0 rd_en=0 wr_data=306ee8c2 rd_data=a006f7a2 full=0 empty=0
+Time=1655000 rst_n=1 wr_en=1 rd_en=0 wr_data=126c9cf7 rd_data=a006f7a2 full=0 empty=0
+Time=1665000 rst_n=1 wr_en=0 rd_en=0 wr_data=126c9cf7 rd_data=a006f7a2 full=0 empty=0
+Time=1685000 rst_n=1 wr_en=0 rd_en=1 wr_data=126c9cf7 rd_data=a006f7a2 full=0 empty=0
+Time=1695000 rst_n=1 wr_en=0 rd_en=0 wr_data=126c9cf7 rd_data=dcad0745 full=0 empty=0
+Time=1715000 rst_n=1 wr_en=1 rd_en=0 wr_data=cb75dbff rd_data=dcad0745 full=0 empty=0
+Time=1725000 rst_n=1 wr_en=0 rd_en=0 wr_data=cb75dbff rd_data=dcad0745 full=0 empty=0
+Time=1745000 rst_n=1 wr_en=1 rd_en=0 wr_data=228166d9 rd_data=dcad0745 full=0 empty=0
+Time=1755000 rst_n=1 wr_en=0 rd_en=0 wr_data=228166d9 rd_data=dcad0745 full=0 empty=0
+Time=1775000 rst_n=1 wr_en=1 rd_en=0 wr_data=e0918e9a rd_data=dcad0745 full=0 empty=0
+Time=1785000 rst_n=1 wr_en=0 rd_en=0 wr_data=e0918e9a rd_data=dcad0745 full=0 empty=0
+Time=1805000 rst_n=1 wr_en=0 rd_en=1 wr_data=e0918e9a rd_data=dcad0745 full=0 empty=0
+Time=1815000 rst_n=1 wr_en=0 rd_en=0 wr_data=e0918e9a rd_data=c9b89c8e full=0 empty=0
+Time=1835000 rst_n=1 wr_en=0 rd_en=1 wr_data=e0918e9a rd_data=c9b89c8e full=0 empty=0
+Time=1845000 rst_n=1 wr_en=0 rd_en=0 wr_data=e0918e9a rd_data=1a53268e full=0 empty=0
+Time=1865000 rst_n=1 wr_en=1 rd_en=0 wr_data=4ddb2da rd_data=1a53268e full=0 empty=0
+Time=1875000 rst_n=1 wr_en=0 rd_en=0 wr_data=4ddb2da rd_data=1a53268e full=0 empty=0
+Time=1895000 rst_n=1 wr_en=0 rd_en=1 wr_data=4ddb2da rd_data=1a53268e full=0 empty=0
+Time=1905000 rst_n=1 wr_en=0 rd_en=0 wr_data=4ddb2da rd_data=d7dd8e1f full=0 empty=0
+Time=1925000 rst_n=1 wr_en=1 rd_en=0 wr_data=e027862c rd_data=d7dd8e1f full=0 empty=0
+Time=1935000 rst_n=1 wr_en=0 rd_en=0 wr_data=e027862c rd_data=d7dd8e1f full=0 empty=0
+Time=1955000 rst_n=1 wr_en=1 rd_en=0 wr_data=c8535b2a rd_data=d7dd8e1f full=0 empty=0
+Time=1965000 rst_n=1 wr_en=0 rd_en=0 wr_data=c8535b2a rd_data=d7dd8e1f full=0 empty=0
+Time=1985000 rst_n=1 wr_en=0 rd_en=1 wr_data=c8535b2a rd_data=d7dd8e1f full=0 empty=0
+Time=1995000 rst_n=1 wr_en=0 rd_en=0 wr_data=c8535b2a rd_data=2ea638dd full=0 empty=0
+Time=2015000 rst_n=1 wr_en=0 rd_en=1 wr_data=c8535b2a rd_data=2ea638dd full=0 empty=0
+Time=2025000 rst_n=1 wr_en=0 rd_en=0 wr_data=c8535b2a rd_data=306ee8c2 full=0 empty=0
+Time=2045000 rst_n=1 wr_en=1 rd_en=0 wr_data=aaf28743 rd_data=306ee8c2 full=0 empty=0
+Time=2055000 rst_n=1 wr_en=0 rd_en=0 wr_data=aaf28743 rd_data=306ee8c2 full=0 empty=0
+Time=2075000 rst_n=1 wr_en=0 rd_en=1 wr_data=aaf28743 rd_data=306ee8c2 full=0 empty=0
+Time=2085000 rst_n=1 wr_en=0 rd_en=0 wr_data=aaf28743 rd_data=126c9cf7 full=0 empty=0
+Time=2105000 rst_n=1 wr_en=1 rd_en=0 wr_data=1a73b4fb rd_data=126c9cf7 full=0 empty=0
+Time=2115000 rst_n=1 wr_en=0 rd_en=0 wr_data=1a73b4fb rd_data=126c9cf7 full=0 empty=0
+Time=2135000 rst_n=1 wr_en=0 rd_en=1 wr_data=1a73b4fb rd_data=126c9cf7 full=0 empty=0
+Time=2145000 rst_n=1 wr_en=0 rd_en=0 wr_data=1a73b4fb rd_data=cb75dbff full=0 empty=0
+Time=2165000 rst_n=1 wr_en=0 rd_en=1 wr_data=1a73b4fb rd_data=cb75dbff full=0 empty=0
+Time=2175000 rst_n=1 wr_en=0 rd_en=0 wr_data=1a73b4fb rd_data=228166d9 full=0 empty=0
+Time=2195000 rst_n=1 wr_en=1 rd_en=0 wr_data=c658125a rd_data=228166d9 full=0 empty=0
+Time=2205000 rst_n=1 wr_en=0 rd_en=0 wr_data=c658125a rd_data=228166d9 full=0 empty=0
+Time=2225000 rst_n=1 wr_en=0 rd_en=1 wr_data=c658125a rd_data=228166d9 full=0 empty=0
+Time=2235000 rst_n=1 wr_en=0 rd_en=0 wr_data=c658125a rd_data=e0918e9a full=0 empty=0
+Time=2255000 rst_n=1 wr_en=0 rd_en=1 wr_data=c658125a rd_data=e0918e9a full=0 empty=0
+Time=2265000 rst_n=1 wr_en=0 rd_en=0 wr_data=c658125a rd_data=4ddb2da full=0 empty=0
+Time=2285000 rst_n=1 wr_en=1 rd_en=0 wr_data=d165f362 rd_data=4ddb2da full=0 empty=0
+Time=2295000 rst_n=1 wr_en=0 rd_en=0 wr_data=d165f362 rd_data=4ddb2da full=0 empty=0
+Time=2315000 rst_n=1 wr_en=0 rd_en=1 wr_data=d165f362 rd_data=4ddb2da full=0 empty=0
+Time=2325000 rst_n=1 wr_en=0 rd_en=0 wr_data=d165f362 rd_data=e027862c full=0 empty=0
+Time=2345000 rst_n=1 wr_en=1 rd_en=0 wr_data=f130ef30 rd_data=e027862c full=0 empty=0
+Time=2355000 rst_n=1 wr_en=0 rd_en=0 wr_data=f130ef30 rd_data=e027862c full=0 empty=0
+Time=2375000 rst_n=1 wr_en=1 rd_en=0 wr_data=bb9d586d rd_data=e027862c full=0 empty=0
+Time=2385000 rst_n=1 wr_en=0 rd_en=0 wr_data=bb9d586d rd_data=e027862c full=0 empty=0
+Time=2405000 rst_n=1 wr_en=1 rd_en=0 wr_data=ed0e5eaa rd_data=e027862c full=0 empty=0
+Time=2415000 rst_n=1 wr_en=0 rd_en=0 wr_data=ed0e5eaa rd_data=e027862c full=0 empty=0
+Time=2435000 rst_n=1 wr_en=1 rd_en=0 wr_data=584017f rd_data=e027862c full=0 empty=0
+Time=2445000 rst_n=1 wr_en=0 rd_en=0 wr_data=584017f rd_data=e027862c full=0 empty=0
+Time=2465000 rst_n=1 wr_en=1 rd_en=0 wr_data=4fe416c rd_data=e027862c full=0 empty=0
+Time=2475000 rst_n=1 wr_en=0 rd_en=0 wr_data=4fe416c rd_data=e027862c full=0 empty=0
+Time=2495000 rst_n=1 wr_en=0 rd_en=1 wr_data=4fe416c rd_data=e027862c full=0 empty=0
+Time=2505000 rst_n=1 wr_en=0 rd_en=0 wr_data=4fe416c rd_data=c8535b2a full=0 empty=0
+Time=2525000 rst_n=1 wr_en=0 rd_en=1 wr_data=4fe416c rd_data=c8535b2a full=0 empty=0
+Time=2535000 rst_n=1 wr_en=0 rd_en=0 wr_data=4fe416c rd_data=aaf28743 full=0 empty=0
+Time=2555000 rst_n=1 wr_en=0 rd_en=1 wr_data=4fe416c rd_data=aaf28743 full=0 empty=0
+Time=2565000 rst_n=1 wr_en=0 rd_en=0 wr_data=4fe416c rd_data=1a73b4fb full=0 empty=0
+Time=2585000 rst_n=1 wr_en=1 rd_en=0 wr_data=915617d rd_data=1a73b4fb full=0 empty=0
+Time=2595000 rst_n=1 wr_en=0 rd_en=0 wr_data=915617d rd_data=1a73b4fb full=0 empty=0
+Time=2615000 rst_n=1 wr_en=1 rd_en=0 wr_data=cba6b1c7 rd_data=1a73b4fb full=0 empty=0
+Time=2625000 rst_n=1 wr_en=0 rd_en=0 wr_data=cba6b1c7 rd_data=1a73b4fb full=0 empty=0
+Time=2645000 rst_n=1 wr_en=1 rd_en=0 wr_data=f53c9ee3 rd_data=1a73b4fb full=0 empty=0
+Time=2655000 rst_n=1 wr_en=0 rd_en=0 wr_data=f53c9ee3 rd_data=1a73b4fb full=0 empty=0
+Time=2675000 rst_n=1 wr_en=0 rd_en=1 wr_data=f53c9ee3 rd_data=1a73b4fb full=0 empty=0
+Time=2685000 rst_n=1 wr_en=0 rd_en=0 wr_data=f53c9ee3 rd_data=c658125a full=0 empty=0
+Time=2705000 rst_n=1 wr_en=1 rd_en=0 wr_data=bd764fbf rd_data=c658125a full=0 empty=0
+Time=2715000 rst_n=1 wr_en=0 rd_en=0 wr_data=bd764fbf rd_data=c658125a full=0 empty=0
+Time=2735000 rst_n=1 wr_en=0 rd_en=1 wr_data=bd764fbf rd_data=c658125a full=0 empty=0
+Time=2745000 rst_n=1 wr_en=0 rd_en=0 wr_data=bd764fbf rd_data=d165f362 full=0 empty=0
+Time=2765000 rst_n=1 wr_en=0 rd_en=1 wr_data=bd764fbf rd_data=d165f362 full=0 empty=0
+Time=2775000 rst_n=1 wr_en=0 rd_en=0 wr_data=bd764fbf rd_data=f130ef30 full=0 empty=0
+Time=2795000 rst_n=1 wr_en=1 rd_en=0 wr_data=ce6f717c rd_data=f130ef30 full=0 empty=0
+Time=2805000 rst_n=1 wr_en=0 rd_en=0 wr_data=ce6f717c rd_data=f130ef30 full=0 empty=0
+Time=2825000 rst_n=1 wr_en=1 rd_en=0 wr_data=a2210bf3 rd_data=f130ef30 full=0 empty=0
+Time=2835000 rst_n=1 wr_en=0 rd_en=0 wr_data=a2210bf3 rd_data=f130ef30 full=0 empty=0
+Time=2855000 rst_n=1 wr_en=0 rd_en=1 wr_data=a2210bf3 rd_data=f130ef30 full=0 empty=0
+Time=2865000 rst_n=1 wr_en=0 rd_en=0 wr_data=a2210bf3 rd_data=bb9d586d full=0 empty=0
+Time=2885000 rst_n=1 wr_en=0 rd_en=1 wr_data=a2210bf3 rd_data=bb9d586d full=0 empty=0
+Time=2895000 rst_n=1 wr_en=0 rd_en=0 wr_data=a2210bf3 rd_data=ed0e5eaa full=0 empty=0
+Time=2915000 rst_n=1 wr_en=0 rd_en=1 wr_data=a2210bf3 rd_data=ed0e5eaa full=0 empty=0
+Time=2925000 rst_n=1 wr_en=0 rd_en=0 wr_data=a2210bf3 rd_data=584017f full=0 empty=0
+Time=2945000 rst_n=1 wr_en=0 rd_en=1 wr_data=a2210bf3 rd_data=584017f full=0 empty=0
+Time=2955000 rst_n=1 wr_en=0 rd_en=0 wr_data=a2210bf3 rd_data=4fe416c full=0 empty=0
+Time=2975000 rst_n=1 wr_en=0 rd_en=1 wr_data=a2210bf3 rd_data=4fe416c full=0 empty=0
+Time=2985000 rst_n=1 wr_en=0 rd_en=0 wr_data=a2210bf3 rd_data=915617d full=0 empty=0
+UVM_INFO C:/Xilinx/Vivado/2024.2/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv(19968) @ 2995000: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
+UVM_INFO C:/Xilinx/Vivado/2024.2/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv(13673) @ 2995000: reporter [UVM/REPORT/SERVER] 
+--- UVM Report Summary ---
+
+** Report counts by severity
+UVM_INFO :    4
+UVM_WARNING :    7
+UVM_ERROR :    0
+UVM_FATAL :    0
+** Report counts by id
+[RNTST]     1
+[TEST_DONE]     1
+[TPRGED]     7
+[UVM/COMP/NAMECHECK]     1
+[UVM/RELNOTES]     1
+
+$finish called at time : 2995 ns : File "C:/Xilinx/Vivado/2024.2/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv" Line 18699
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'fifo_tb_top_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 100000ns
+launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:07 . Memory (MB): peak = 1258.332 ; gain = 20.609
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [H:\Vivado_fpga\PROJECTS\FIFO_UVM\FIFO_UVM.srcs\sim_1\new\fifo_test.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [H:\Vivado_fpga\PROJECTS\FIFO_UVM\FIFO_UVM.srcs\sources_1\new\fifo_if.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [H:\Vivado_fpga\PROJECTS\FIFO_UVM\FIFO_UVM.srcs\sources_1\new\fifo_agent.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [H:\Vivado_fpga\PROJECTS\FIFO_UVM\FIFO_UVM.srcs\sim_1\new\fifo_env.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [H:\Vivado_fpga\PROJECTS\FIFO_UVM\FIFO_UVM.srcs\sim_1\new\fifo_tb_top.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [H:\Vivado_fpga\PROJECTS\FIFO_UVM\FIFO_UVM.srcs\sim_1\new\sync_fifo.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [H:\Vivado_fpga\PROJECTS\FIFO_UVM\FIFO_UVM.srcs\sim_1\new\fifo_pkg.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [H:\Vivado_fpga\PROJECTS\FIFO_UVM\FIFO_UVM.srcs\sim_1\new\fifo_env.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [H:\Vivado_fpga\PROJECTS\FIFO_UVM\FIFO_UVM.srcs\sim_1\new\fifo_env.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [H:\Vivado_fpga\PROJECTS\FIFO_UVM\FIFO_UVM.srcs\sim_1\new\fifo_test.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [H:\Vivado_fpga\PROJECTS\FIFO_UVM\FIFO_UVM.srcs\sources_1\new\fifo_if.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [H:\Vivado_fpga\PROJECTS\FIFO_UVM\FIFO_UVM.srcs\sources_1\new\fifo_agent.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [H:\Vivado_fpga\PROJECTS\FIFO_UVM\FIFO_UVM.srcs\sim_1\new\fifo_env.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [H:\Vivado_fpga\PROJECTS\FIFO_UVM\FIFO_UVM.srcs\sim_1\new\fifo_tb_top.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [H:\Vivado_fpga\PROJECTS\FIFO_UVM\FIFO_UVM.srcs\sim_1\new\sync_fifo.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [H:\Vivado_fpga\PROJECTS\FIFO_UVM\FIFO_UVM.srcs\sim_1\new\fifo_pkg.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [H:\Vivado_fpga\PROJECTS\FIFO_UVM\FIFO_UVM.srcs\sources_1\new\fifo_agent.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [H:\Vivado_fpga\PROJECTS\FIFO_UVM\FIFO_UVM.srcs\sources_1\new\fifo_agent.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [H:\Vivado_fpga\PROJECTS\FIFO_UVM\FIFO_UVM.srcs\sim_1\new\fifo_test.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [H:\Vivado_fpga\PROJECTS\FIFO_UVM\FIFO_UVM.srcs\sources_1\new\fifo_if.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [H:\Vivado_fpga\PROJECTS\FIFO_UVM\FIFO_UVM.srcs\sources_1\new\fifo_agent.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [H:\Vivado_fpga\PROJECTS\FIFO_UVM\FIFO_UVM.srcs\sim_1\new\fifo_env.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [H:\Vivado_fpga\PROJECTS\FIFO_UVM\FIFO_UVM.srcs\sim_1\new\fifo_tb_top.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [H:\Vivado_fpga\PROJECTS\FIFO_UVM\FIFO_UVM.srcs\sim_1\new\sync_fifo.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [H:\Vivado_fpga\PROJECTS\FIFO_UVM\FIFO_UVM.srcs\sim_1\new\fifo_pkg.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [H:\Vivado_fpga\PROJECTS\FIFO_UVM\FIFO_UVM.srcs\sim_1\new\fifo_tb_top.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [H:\Vivado_fpga\PROJECTS\FIFO_UVM\FIFO_UVM.srcs\sim_1\new\fifo_tb_top.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [H:\Vivado_fpga\PROJECTS\FIFO_UVM\FIFO_UVM.srcs\sim_1\new\fifo_test.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [H:\Vivado_fpga\PROJECTS\FIFO_UVM\FIFO_UVM.srcs\sources_1\new\fifo_if.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [H:\Vivado_fpga\PROJECTS\FIFO_UVM\FIFO_UVM.srcs\sources_1\new\fifo_agent.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [H:\Vivado_fpga\PROJECTS\FIFO_UVM\FIFO_UVM.srcs\sim_1\new\fifo_env.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [H:\Vivado_fpga\PROJECTS\FIFO_UVM\FIFO_UVM.srcs\sim_1\new\fifo_tb_top.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [H:\Vivado_fpga\PROJECTS\FIFO_UVM\FIFO_UVM.srcs\sim_1\new\sync_fifo.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [H:\Vivado_fpga\PROJECTS\FIFO_UVM\FIFO_UVM.srcs\sim_1\new\fifo_pkg.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [H:\Vivado_fpga\PROJECTS\FIFO_UVM\FIFO_UVM.srcs\sources_1\new\fifo_if.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [H:\Vivado_fpga\PROJECTS\FIFO_UVM\FIFO_UVM.srcs\sources_1\new\fifo_if.sv:]
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'fifo_tb_top'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'H:/Vivado_fpga/PROJECTS/FIFO_UVM/FIFO_UVM.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/Vivado/2024.2/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'fifo_tb_top' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'H:/Vivado_fpga/PROJECTS/FIFO_UVM/FIFO_UVM.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L uvm -L uvm --define UVM_NO_DPI --define UVM_NO_XML_PARSER -prj fifo_tb_top_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "H:/Vivado_fpga/PROJECTS/FIFO_UVM/FIFO_UVM.srcs/sim_1/new/fifo_test_pkg.sv" into library xil_defaultlib
+WARNING: [VRFC 10-3381] ignoring re-definition of command line macro 'UVM_NO_DPI' [H:/Vivado_fpga/PROJECTS/FIFO_UVM/FIFO_UVM.srcs/sim_1/new/fifo_test_pkg.sv:5]
+WARNING: [VRFC 10-3381] ignoring re-definition of command line macro 'UVM_NO_XML_PARSER' [H:/Vivado_fpga/PROJECTS/FIFO_UVM/FIFO_UVM.srcs/sim_1/new/fifo_test_pkg.sv:6]
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "H:/Vivado_fpga/PROJECTS/FIFO_UVM/FIFO_UVM.srcs/sim_1/new/fifo_test.sv" into library xil_defaultlib
+WARNING: [VRFC 10-3609] overwriting previous definition of package 'uvm_pkg' [C:/Xilinx/Vivado/2024.2/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv:4356]
+WARNING: [VRFC 10-3669] re-analyze package 'fifo_test_pkg' since package 'uvm_pkg' is overwritten or removed [H:/Vivado_fpga/PROJECTS/FIFO_UVM/FIFO_UVM.srcs/sim_1/new/fifo_test_pkg.sv:8]
+WARNING: [VRFC 10-3669] re-analyze package 'fifo_pkg' since package 'uvm_pkg' is overwritten or removed [H:/Vivado_fpga/PROJECTS/FIFO_UVM/FIFO_UVM.srcs/sim_1/new/fifo_pkg.sv:8]
+WARNING: [VRFC 10-3381] ignoring re-definition of command line macro 'UVM_NO_DPI' [H:/Vivado_fpga/PROJECTS/FIFO_UVM/FIFO_UVM.srcs/sim_1/new/fifo_pkg.sv:6]
+WARNING: [VRFC 10-3381] ignoring re-definition of command line macro 'UVM_NO_XML_PARSER' [H:/Vivado_fpga/PROJECTS/FIFO_UVM/FIFO_UVM.srcs/sim_1/new/fifo_pkg.sv:7]
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "H:/Vivado_fpga/PROJECTS/FIFO_UVM/FIFO_UVM.srcs/sim_1/new/fifo_pkg.sv" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "H:/Vivado_fpga/PROJECTS/FIFO_UVM/FIFO_UVM.srcs/sim_1/new/sync_fifo.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sync_fifo
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "H:/Vivado_fpga/PROJECTS/FIFO_UVM/FIFO_UVM.srcs/sim_1/new/fifo_tb_top.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sync_fifo
+WARNING: [VRFC 10-3609] overwriting previous definition of module 'sync_fifo' [H:/Vivado_fpga/PROJECTS/FIFO_UVM/FIFO_UVM.srcs/sim_1/new/sync_fifo.sv:2]
+WARNING: [VRFC 10-3381] ignoring re-definition of command line macro 'UVM_NO_DPI' [H:/Vivado_fpga/PROJECTS/FIFO_UVM/FIFO_UVM.srcs/sim_1/new/fifo_tb_top.sv:7]
+WARNING: [VRFC 10-3381] ignoring re-definition of command line macro 'UVM_NO_XML_PARSER' [H:/Vivado_fpga/PROJECTS/FIFO_UVM/FIFO_UVM.srcs/sim_1/new/fifo_tb_top.sv:8]
+INFO: [VRFC 10-311] analyzing module fifo_tb_top
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'H:/Vivado_fpga/PROJECTS/FIFO_UVM/FIFO_UVM.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip --snapshot fifo_tb_top_behav xil_defaultlib.fifo_tb_top xil_defaultlib.glbl -log elaborate.log -L uvm"
+Vivado Simulator v2024.2.0
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2024.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip --snapshot fifo_tb_top_behav xil_defaultlib.fifo_tb_top xil_defaultlib.glbl -log elaborate.log -L uvm 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4099] "C:/Xilinx/Vivado/2024.2/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv" Line 4356. Module uvm_pkg doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Xilinx/Vivado/2024.2/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv" Line 4356. Module uvm_pkg doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4468] File : C:/Xilinx/Vivado/2024.2/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv, Line : 25994, RANDC variable size more than 8 bits. This will be treated as a RAND variable instead.
+WARNING: [XSIM 43-4099] "H:/Vivado_fpga/PROJECTS/FIFO_UVM/FIFO_UVM.srcs/sim_1/new/fifo_pkg.sv" Line 11. Module fifo_pkg doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "H:/Vivado_fpga/PROJECTS/FIFO_UVM/FIFO_UVM.srcs/sim_1/new/fifo_pkg.sv" Line 11. Module fifo_pkg doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "H:/Vivado_fpga/PROJECTS/FIFO_UVM/FIFO_UVM.srcs/sim_1/new/fifo_test_pkg.sv" Line 8. Module fifo_test_pkg doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "H:/Vivado_fpga/PROJECTS/FIFO_UVM/FIFO_UVM.srcs/sim_1/new/fifo_test_pkg.sv" Line 8. Module fifo_test_pkg doesn't have a timescale but at least one module in design has a timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package xil_defaultlib.$unit_fifo_test_pkg_sv_184790964...
+Compiling package xil_defaultlib.uvm_pkg
+Compiling package std.std
+Compiling package xil_defaultlib.fifo_pkg
+Compiling package xil_defaultlib.fifo_test_pkg
+Compiling module xil_defaultlib.driver_cb
+Compiling module xil_defaultlib.monitor_cb
+Compiling module xil_defaultlib.fifo_if_default
+Compiling module xil_defaultlib.sync_fifo_default
+Compiling module xil_defaultlib.fifo_tb_top
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot fifo_tb_top_behav
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:27 . Memory (MB): peak = 1270.688 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '27' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'H:/Vivado_fpga/PROJECTS/FIFO_UVM/FIFO_UVM.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "fifo_tb_top_behav -key {Behavioral:sim_1:Functional:fifo_tb_top} -tclbatch {fifo_tb_top.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+source fifo_tb_top.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 100000ns
+UVM_INFO C:/Xilinx/Vivado/2024.2/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv(18601) @ 0: reporter [UVM/RELNOTES] 
+----------------------------------------------------------------
+UVM-1.2
+(C) 2007-2014 Mentor Graphics Corporation
+(C) 2007-2014 Cadence Design Systems, Inc.
+(C) 2006-2014 Synopsys, Inc.
+(C) 2011-2013 Cypress Semiconductor Corp.
+(C) 2013-2014 NVIDIA Corporation
+----------------------------------------------------------------
+
+  ***********       IMPORTANT RELEASE NOTES         ************
+
+  You are using a version of the UVM library that has been compiled
+  with `UVM_NO_DEPRECATED undefined.
+
+  You are using a version of the UVM library that has been compiled
+  with `UVM_OBJECT_DO_NOT_NEED_CONSTRUCTOR undefined.
+
+      (Specify +UVM_NO_RELNOTES to turn off this notice)
+
+UVM_WARNING @ 0: reporter [TPRGED] Type name 'fifo_base_test' already registered with factory. No string-based lookup support for multiple types with the same type name.
+UVM_WARNING @ 0: reporter [TPRGED] Type name 'fifo_sequence' already registered with factory. No string-based lookup support for multiple types with the same type name.
+UVM_INFO @ 0: reporter [RNTST] Running test fifo_random_test...
+UVM_INFO C:/Xilinx/Vivado/2024.2/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv(20867) @ 0: reporter [UVM/COMP/NAMECHECK] This implementation of the component name checks requires DPI to be enabled
+Time=0 rst_n=0 wr_en=x rd_en=x wr_data=xxxxxxxx rd_data=xxxxxxxx full=0 empty=1
+Time=5000 rst_n=0 wr_en=1 rd_en=0 wr_data=daace7a3 rd_data=xxxxxxxx full=0 empty=1
+Time=15000 rst_n=0 wr_en=0 rd_en=0 wr_data=daace7a3 rd_data=daace7a3 full=0 empty=1
+Time=35000 rst_n=0 wr_en=0 rd_en=1 wr_data=daace7a3 rd_data=daace7a3 full=0 empty=1
+Time=45000 rst_n=0 wr_en=0 rd_en=0 wr_data=daace7a3 rd_data=daace7a3 full=0 empty=1
+Time=50000 rst_n=1 wr_en=0 rd_en=0 wr_data=daace7a3 rd_data=daace7a3 full=0 empty=1
+Time=65000 rst_n=1 wr_en=0 rd_en=1 wr_data=daace7a3 rd_data=daace7a3 full=0 empty=1
+Time=75000 rst_n=1 wr_en=0 rd_en=0 wr_data=daace7a3 rd_data=daace7a3 full=0 empty=1
+Time=95000 rst_n=1 wr_en=0 rd_en=1 wr_data=daace7a3 rd_data=daace7a3 full=0 empty=1
+Time=105000 rst_n=1 wr_en=0 rd_en=0 wr_data=daace7a3 rd_data=daace7a3 full=0 empty=1
+Time=125000 rst_n=1 wr_en=0 rd_en=1 wr_data=daace7a3 rd_data=daace7a3 full=0 empty=1
+Time=135000 rst_n=1 wr_en=0 rd_en=0 wr_data=daace7a3 rd_data=daace7a3 full=0 empty=1
+Time=155000 rst_n=1 wr_en=0 rd_en=1 wr_data=daace7a3 rd_data=daace7a3 full=0 empty=1
+Time=165000 rst_n=1 wr_en=0 rd_en=0 wr_data=daace7a3 rd_data=daace7a3 full=0 empty=1
+Time=185000 rst_n=1 wr_en=1 rd_en=0 wr_data=ce0dc61e rd_data=daace7a3 full=0 empty=1
+Time=195000 rst_n=1 wr_en=0 rd_en=0 wr_data=ce0dc61e rd_data=ce0dc61e full=0 empty=0
+Time=215000 rst_n=1 wr_en=1 rd_en=0 wr_data=1f2e1048 rd_data=ce0dc61e full=0 empty=0
+Time=225000 rst_n=1 wr_en=0 rd_en=0 wr_data=1f2e1048 rd_data=ce0dc61e full=0 empty=0
+Time=245000 rst_n=1 wr_en=1 rd_en=0 wr_data=9752f737 rd_data=ce0dc61e full=0 empty=0
+Time=255000 rst_n=1 wr_en=0 rd_en=0 wr_data=9752f737 rd_data=ce0dc61e full=0 empty=0
+Time=275000 rst_n=1 wr_en=1 rd_en=0 wr_data=f67c7b1a rd_data=ce0dc61e full=0 empty=0
+Time=285000 rst_n=1 wr_en=0 rd_en=0 wr_data=f67c7b1a rd_data=ce0dc61e full=0 empty=0
+Time=305000 rst_n=1 wr_en=0 rd_en=1 wr_data=f67c7b1a rd_data=ce0dc61e full=0 empty=0
+Time=315000 rst_n=1 wr_en=0 rd_en=0 wr_data=f67c7b1a rd_data=1f2e1048 full=0 empty=0
+Time=335000 rst_n=1 wr_en=1 rd_en=0 wr_data=a9dd5983 rd_data=1f2e1048 full=0 empty=0
+Time=345000 rst_n=1 wr_en=0 rd_en=0 wr_data=a9dd5983 rd_data=1f2e1048 full=0 empty=0
+Time=365000 rst_n=1 wr_en=1 rd_en=0 wr_data=fe14b40c rd_data=1f2e1048 full=0 empty=0
+Time=375000 rst_n=1 wr_en=0 rd_en=0 wr_data=fe14b40c rd_data=1f2e1048 full=0 empty=0
+Time=395000 rst_n=1 wr_en=1 rd_en=0 wr_data=f950ab62 rd_data=1f2e1048 full=0 empty=0
+Time=405000 rst_n=1 wr_en=0 rd_en=0 wr_data=f950ab62 rd_data=1f2e1048 full=0 empty=0
+Time=425000 rst_n=1 wr_en=1 rd_en=0 wr_data=db913fab rd_data=1f2e1048 full=0 empty=0
+Time=435000 rst_n=1 wr_en=0 rd_en=0 wr_data=db913fab rd_data=1f2e1048 full=0 empty=0
+Time=455000 rst_n=1 wr_en=1 rd_en=0 wr_data=24d670da rd_data=1f2e1048 full=0 empty=0
+Time=465000 rst_n=1 wr_en=0 rd_en=0 wr_data=24d670da rd_data=1f2e1048 full=0 empty=0
+Time=485000 rst_n=1 wr_en=1 rd_en=0 wr_data=d5203ec7 rd_data=1f2e1048 full=0 empty=0
+Time=495000 rst_n=1 wr_en=0 rd_en=0 wr_data=d5203ec7 rd_data=1f2e1048 full=0 empty=0
+Time=515000 rst_n=1 wr_en=1 rd_en=0 wr_data=ec6ea9cd rd_data=1f2e1048 full=0 empty=0
+Time=525000 rst_n=1 wr_en=0 rd_en=0 wr_data=ec6ea9cd rd_data=1f2e1048 full=0 empty=0
+Time=545000 rst_n=1 wr_en=0 rd_en=1 wr_data=ec6ea9cd rd_data=1f2e1048 full=0 empty=0
+Time=555000 rst_n=1 wr_en=0 rd_en=0 wr_data=ec6ea9cd rd_data=9752f737 full=0 empty=0
+Time=575000 rst_n=1 wr_en=1 rd_en=0 wr_data=d019561e rd_data=9752f737 full=0 empty=0
+Time=585000 rst_n=1 wr_en=0 rd_en=0 wr_data=d019561e rd_data=9752f737 full=0 empty=0
+Time=605000 rst_n=1 wr_en=1 rd_en=0 wr_data=9c7597a4 rd_data=9752f737 full=0 empty=0
+Time=615000 rst_n=1 wr_en=0 rd_en=0 wr_data=9c7597a4 rd_data=9752f737 full=0 empty=0
+Time=635000 rst_n=1 wr_en=1 rd_en=0 wr_data=fd67620 rd_data=9752f737 full=0 empty=0
+Time=645000 rst_n=1 wr_en=0 rd_en=0 wr_data=fd67620 rd_data=9752f737 full=0 empty=0
+Time=665000 rst_n=1 wr_en=0 rd_en=1 wr_data=fd67620 rd_data=9752f737 full=0 empty=0
+Time=675000 rst_n=1 wr_en=0 rd_en=0 wr_data=fd67620 rd_data=f67c7b1a full=0 empty=0
+Time=695000 rst_n=1 wr_en=1 rd_en=0 wr_data=aba609a5 rd_data=f67c7b1a full=0 empty=0
+Time=705000 rst_n=1 wr_en=0 rd_en=0 wr_data=aba609a5 rd_data=f67c7b1a full=0 empty=0
+Time=725000 rst_n=1 wr_en=1 rd_en=0 wr_data=d414bea1 rd_data=f67c7b1a full=0 empty=0
+Time=735000 rst_n=1 wr_en=0 rd_en=0 wr_data=d414bea1 rd_data=f67c7b1a full=0 empty=0
+Time=755000 rst_n=1 wr_en=1 rd_en=0 wr_data=e388106e rd_data=f67c7b1a full=0 empty=0
+Time=765000 rst_n=1 wr_en=0 rd_en=0 wr_data=e388106e rd_data=f67c7b1a full=0 empty=0
+Time=785000 rst_n=1 wr_en=0 rd_en=1 wr_data=e388106e rd_data=f67c7b1a full=0 empty=0
+Time=795000 rst_n=1 wr_en=0 rd_en=0 wr_data=e388106e rd_data=a9dd5983 full=0 empty=0
+Time=815000 rst_n=1 wr_en=1 rd_en=0 wr_data=f77c8ad5 rd_data=a9dd5983 full=0 empty=0
+Time=825000 rst_n=1 wr_en=0 rd_en=0 wr_data=f77c8ad5 rd_data=a9dd5983 full=0 empty=0
+Time=845000 rst_n=1 wr_en=1 rd_en=0 wr_data=fbfdb36b rd_data=a9dd5983 full=0 empty=0
+Time=855000 rst_n=1 wr_en=0 rd_en=0 wr_data=fbfdb36b rd_data=a9dd5983 full=0 empty=0
+Time=875000 rst_n=1 wr_en=1 rd_en=0 wr_data=278378e3 rd_data=a9dd5983 full=0 empty=0
+Time=885000 rst_n=1 wr_en=0 rd_en=0 wr_data=278378e3 rd_data=a9dd5983 full=1 empty=0
+Time=905000 rst_n=1 wr_en=0 rd_en=1 wr_data=278378e3 rd_data=a9dd5983 full=1 empty=0
+Time=915000 rst_n=1 wr_en=0 rd_en=0 wr_data=278378e3 rd_data=fe14b40c full=0 empty=0
+Time=935000 rst_n=1 wr_en=0 rd_en=1 wr_data=278378e3 rd_data=fe14b40c full=0 empty=0
+Time=945000 rst_n=1 wr_en=0 rd_en=0 wr_data=278378e3 rd_data=f950ab62 full=0 empty=0
+Time=965000 rst_n=1 wr_en=1 rd_en=0 wr_data=d4307646 rd_data=f950ab62 full=0 empty=0
+Time=975000 rst_n=1 wr_en=0 rd_en=0 wr_data=d4307646 rd_data=f950ab62 full=0 empty=0
+Time=995000 rst_n=1 wr_en=0 rd_en=1 wr_data=d4307646 rd_data=f950ab62 full=0 empty=0
+Time=1005000 rst_n=1 wr_en=0 rd_en=0 wr_data=d4307646 rd_data=db913fab full=0 empty=0
+Time=1025000 rst_n=1 wr_en=0 rd_en=1 wr_data=d4307646 rd_data=db913fab full=0 empty=0
+Time=1035000 rst_n=1 wr_en=0 rd_en=0 wr_data=d4307646 rd_data=24d670da full=0 empty=0
+Time=1055000 rst_n=1 wr_en=1 rd_en=0 wr_data=a006f7a2 rd_data=24d670da full=0 empty=0
+Time=1065000 rst_n=1 wr_en=0 rd_en=0 wr_data=a006f7a2 rd_data=24d670da full=0 empty=0
+Time=1085000 rst_n=1 wr_en=1 rd_en=0 wr_data=dcad0745 rd_data=24d670da full=0 empty=0
+Time=1095000 rst_n=1 wr_en=0 rd_en=0 wr_data=dcad0745 rd_data=24d670da full=0 empty=0
+Time=1115000 rst_n=1 wr_en=0 rd_en=1 wr_data=dcad0745 rd_data=24d670da full=0 empty=0
+Time=1125000 rst_n=1 wr_en=0 rd_en=0 wr_data=dcad0745 rd_data=d5203ec7 full=0 empty=0
+Time=1145000 rst_n=1 wr_en=0 rd_en=1 wr_data=dcad0745 rd_data=d5203ec7 full=0 empty=0
+Time=1155000 rst_n=1 wr_en=0 rd_en=0 wr_data=dcad0745 rd_data=ec6ea9cd full=0 empty=0
+Time=1175000 rst_n=1 wr_en=0 rd_en=1 wr_data=dcad0745 rd_data=ec6ea9cd full=0 empty=0
+Time=1185000 rst_n=1 wr_en=0 rd_en=0 wr_data=dcad0745 rd_data=d019561e full=0 empty=0
+Time=1205000 rst_n=1 wr_en=0 rd_en=1 wr_data=dcad0745 rd_data=d019561e full=0 empty=0
+Time=1215000 rst_n=1 wr_en=0 rd_en=0 wr_data=dcad0745 rd_data=9c7597a4 full=0 empty=0
+Time=1235000 rst_n=1 wr_en=0 rd_en=1 wr_data=dcad0745 rd_data=9c7597a4 full=0 empty=0
+Time=1245000 rst_n=1 wr_en=0 rd_en=0 wr_data=dcad0745 rd_data=fd67620 full=0 empty=0
+Time=1265000 rst_n=1 wr_en=0 rd_en=1 wr_data=dcad0745 rd_data=fd67620 full=0 empty=0
+Time=1275000 rst_n=1 wr_en=0 rd_en=0 wr_data=dcad0745 rd_data=aba609a5 full=0 empty=0
+Time=1295000 rst_n=1 wr_en=1 rd_en=0 wr_data=c9b89c8e rd_data=aba609a5 full=0 empty=0
+Time=1305000 rst_n=1 wr_en=0 rd_en=0 wr_data=c9b89c8e rd_data=aba609a5 full=0 empty=0
+Time=1325000 rst_n=1 wr_en=0 rd_en=1 wr_data=c9b89c8e rd_data=aba609a5 full=0 empty=0
+Time=1335000 rst_n=1 wr_en=0 rd_en=0 wr_data=c9b89c8e rd_data=d414bea1 full=0 empty=0
+Time=1355000 rst_n=1 wr_en=1 rd_en=0 wr_data=1a53268e rd_data=d414bea1 full=0 empty=0
+Time=1365000 rst_n=1 wr_en=0 rd_en=0 wr_data=1a53268e rd_data=d414bea1 full=0 empty=0
+Time=1385000 rst_n=1 wr_en=0 rd_en=1 wr_data=1a53268e rd_data=d414bea1 full=0 empty=0
+Time=1395000 rst_n=1 wr_en=0 rd_en=0 wr_data=1a53268e rd_data=e388106e full=0 empty=0
+Time=1415000 rst_n=1 wr_en=0 rd_en=1 wr_data=1a53268e rd_data=e388106e full=0 empty=0
+Time=1425000 rst_n=1 wr_en=0 rd_en=0 wr_data=1a53268e rd_data=f77c8ad5 full=0 empty=0
+Time=1445000 rst_n=1 wr_en=1 rd_en=0 wr_data=d7dd8e1f rd_data=f77c8ad5 full=0 empty=0
+Time=1455000 rst_n=1 wr_en=0 rd_en=0 wr_data=d7dd8e1f rd_data=f77c8ad5 full=0 empty=0
+Time=1475000 rst_n=1 wr_en=0 rd_en=1 wr_data=d7dd8e1f rd_data=f77c8ad5 full=0 empty=0
+Time=1485000 rst_n=1 wr_en=0 rd_en=0 wr_data=d7dd8e1f rd_data=fbfdb36b full=0 empty=0
+Time=1505000 rst_n=1 wr_en=1 rd_en=0 wr_data=2ea638dd rd_data=fbfdb36b full=0 empty=0
+Time=1515000 rst_n=1 wr_en=0 rd_en=0 wr_data=2ea638dd rd_data=fbfdb36b full=0 empty=0
+Time=1535000 rst_n=1 wr_en=0 rd_en=1 wr_data=2ea638dd rd_data=fbfdb36b full=0 empty=0
+Time=1545000 rst_n=1 wr_en=0 rd_en=0 wr_data=2ea638dd rd_data=278378e3 full=0 empty=0
+Time=1565000 rst_n=1 wr_en=0 rd_en=1 wr_data=2ea638dd rd_data=278378e3 full=0 empty=0
+Time=1575000 rst_n=1 wr_en=0 rd_en=0 wr_data=2ea638dd rd_data=d4307646 full=0 empty=0
+Time=1595000 rst_n=1 wr_en=0 rd_en=1 wr_data=2ea638dd rd_data=d4307646 full=0 empty=0
+Time=1605000 rst_n=1 wr_en=0 rd_en=0 wr_data=2ea638dd rd_data=a006f7a2 full=0 empty=0
+Time=1625000 rst_n=1 wr_en=1 rd_en=0 wr_data=306ee8c2 rd_data=a006f7a2 full=0 empty=0
+Time=1635000 rst_n=1 wr_en=0 rd_en=0 wr_data=306ee8c2 rd_data=a006f7a2 full=0 empty=0
+Time=1655000 rst_n=1 wr_en=1 rd_en=0 wr_data=126c9cf7 rd_data=a006f7a2 full=0 empty=0
+Time=1665000 rst_n=1 wr_en=0 rd_en=0 wr_data=126c9cf7 rd_data=a006f7a2 full=0 empty=0
+Time=1685000 rst_n=1 wr_en=0 rd_en=1 wr_data=126c9cf7 rd_data=a006f7a2 full=0 empty=0
+Time=1695000 rst_n=1 wr_en=0 rd_en=0 wr_data=126c9cf7 rd_data=dcad0745 full=0 empty=0
+Time=1715000 rst_n=1 wr_en=1 rd_en=0 wr_data=cb75dbff rd_data=dcad0745 full=0 empty=0
+Time=1725000 rst_n=1 wr_en=0 rd_en=0 wr_data=cb75dbff rd_data=dcad0745 full=0 empty=0
+Time=1745000 rst_n=1 wr_en=1 rd_en=0 wr_data=228166d9 rd_data=dcad0745 full=0 empty=0
+Time=1755000 rst_n=1 wr_en=0 rd_en=0 wr_data=228166d9 rd_data=dcad0745 full=0 empty=0
+Time=1775000 rst_n=1 wr_en=1 rd_en=0 wr_data=e0918e9a rd_data=dcad0745 full=0 empty=0
+Time=1785000 rst_n=1 wr_en=0 rd_en=0 wr_data=e0918e9a rd_data=dcad0745 full=0 empty=0
+Time=1805000 rst_n=1 wr_en=0 rd_en=1 wr_data=e0918e9a rd_data=dcad0745 full=0 empty=0
+Time=1815000 rst_n=1 wr_en=0 rd_en=0 wr_data=e0918e9a rd_data=c9b89c8e full=0 empty=0
+Time=1835000 rst_n=1 wr_en=0 rd_en=1 wr_data=e0918e9a rd_data=c9b89c8e full=0 empty=0
+Time=1845000 rst_n=1 wr_en=0 rd_en=0 wr_data=e0918e9a rd_data=1a53268e full=0 empty=0
+Time=1865000 rst_n=1 wr_en=1 rd_en=0 wr_data=4ddb2da rd_data=1a53268e full=0 empty=0
+Time=1875000 rst_n=1 wr_en=0 rd_en=0 wr_data=4ddb2da rd_data=1a53268e full=0 empty=0
+Time=1895000 rst_n=1 wr_en=0 rd_en=1 wr_data=4ddb2da rd_data=1a53268e full=0 empty=0
+Time=1905000 rst_n=1 wr_en=0 rd_en=0 wr_data=4ddb2da rd_data=d7dd8e1f full=0 empty=0
+Time=1925000 rst_n=1 wr_en=1 rd_en=0 wr_data=e027862c rd_data=d7dd8e1f full=0 empty=0
+Time=1935000 rst_n=1 wr_en=0 rd_en=0 wr_data=e027862c rd_data=d7dd8e1f full=0 empty=0
+Time=1955000 rst_n=1 wr_en=1 rd_en=0 wr_data=c8535b2a rd_data=d7dd8e1f full=0 empty=0
+Time=1965000 rst_n=1 wr_en=0 rd_en=0 wr_data=c8535b2a rd_data=d7dd8e1f full=0 empty=0
+Time=1985000 rst_n=1 wr_en=0 rd_en=1 wr_data=c8535b2a rd_data=d7dd8e1f full=0 empty=0
+Time=1995000 rst_n=1 wr_en=0 rd_en=0 wr_data=c8535b2a rd_data=2ea638dd full=0 empty=0
+Time=2015000 rst_n=1 wr_en=0 rd_en=1 wr_data=c8535b2a rd_data=2ea638dd full=0 empty=0
+Time=2025000 rst_n=1 wr_en=0 rd_en=0 wr_data=c8535b2a rd_data=306ee8c2 full=0 empty=0
+Time=2045000 rst_n=1 wr_en=1 rd_en=0 wr_data=aaf28743 rd_data=306ee8c2 full=0 empty=0
+Time=2055000 rst_n=1 wr_en=0 rd_en=0 wr_data=aaf28743 rd_data=306ee8c2 full=0 empty=0
+Time=2075000 rst_n=1 wr_en=0 rd_en=1 wr_data=aaf28743 rd_data=306ee8c2 full=0 empty=0
+Time=2085000 rst_n=1 wr_en=0 rd_en=0 wr_data=aaf28743 rd_data=126c9cf7 full=0 empty=0
+Time=2105000 rst_n=1 wr_en=1 rd_en=0 wr_data=1a73b4fb rd_data=126c9cf7 full=0 empty=0
+Time=2115000 rst_n=1 wr_en=0 rd_en=0 wr_data=1a73b4fb rd_data=126c9cf7 full=0 empty=0
+Time=2135000 rst_n=1 wr_en=0 rd_en=1 wr_data=1a73b4fb rd_data=126c9cf7 full=0 empty=0
+Time=2145000 rst_n=1 wr_en=0 rd_en=0 wr_data=1a73b4fb rd_data=cb75dbff full=0 empty=0
+Time=2165000 rst_n=1 wr_en=0 rd_en=1 wr_data=1a73b4fb rd_data=cb75dbff full=0 empty=0
+Time=2175000 rst_n=1 wr_en=0 rd_en=0 wr_data=1a73b4fb rd_data=228166d9 full=0 empty=0
+Time=2195000 rst_n=1 wr_en=1 rd_en=0 wr_data=c658125a rd_data=228166d9 full=0 empty=0
+Time=2205000 rst_n=1 wr_en=0 rd_en=0 wr_data=c658125a rd_data=228166d9 full=0 empty=0
+Time=2225000 rst_n=1 wr_en=0 rd_en=1 wr_data=c658125a rd_data=228166d9 full=0 empty=0
+Time=2235000 rst_n=1 wr_en=0 rd_en=0 wr_data=c658125a rd_data=e0918e9a full=0 empty=0
+Time=2255000 rst_n=1 wr_en=0 rd_en=1 wr_data=c658125a rd_data=e0918e9a full=0 empty=0
+Time=2265000 rst_n=1 wr_en=0 rd_en=0 wr_data=c658125a rd_data=4ddb2da full=0 empty=0
+Time=2285000 rst_n=1 wr_en=1 rd_en=0 wr_data=d165f362 rd_data=4ddb2da full=0 empty=0
+Time=2295000 rst_n=1 wr_en=0 rd_en=0 wr_data=d165f362 rd_data=4ddb2da full=0 empty=0
+Time=2315000 rst_n=1 wr_en=0 rd_en=1 wr_data=d165f362 rd_data=4ddb2da full=0 empty=0
+Time=2325000 rst_n=1 wr_en=0 rd_en=0 wr_data=d165f362 rd_data=e027862c full=0 empty=0
+Time=2345000 rst_n=1 wr_en=1 rd_en=0 wr_data=f130ef30 rd_data=e027862c full=0 empty=0
+Time=2355000 rst_n=1 wr_en=0 rd_en=0 wr_data=f130ef30 rd_data=e027862c full=0 empty=0
+Time=2375000 rst_n=1 wr_en=1 rd_en=0 wr_data=bb9d586d rd_data=e027862c full=0 empty=0
+Time=2385000 rst_n=1 wr_en=0 rd_en=0 wr_data=bb9d586d rd_data=e027862c full=0 empty=0
+Time=2405000 rst_n=1 wr_en=1 rd_en=0 wr_data=ed0e5eaa rd_data=e027862c full=0 empty=0
+Time=2415000 rst_n=1 wr_en=0 rd_en=0 wr_data=ed0e5eaa rd_data=e027862c full=0 empty=0
+Time=2435000 rst_n=1 wr_en=1 rd_en=0 wr_data=584017f rd_data=e027862c full=0 empty=0
+Time=2445000 rst_n=1 wr_en=0 rd_en=0 wr_data=584017f rd_data=e027862c full=0 empty=0
+Time=2465000 rst_n=1 wr_en=1 rd_en=0 wr_data=4fe416c rd_data=e027862c full=0 empty=0
+Time=2475000 rst_n=1 wr_en=0 rd_en=0 wr_data=4fe416c rd_data=e027862c full=0 empty=0
+Time=2495000 rst_n=1 wr_en=0 rd_en=1 wr_data=4fe416c rd_data=e027862c full=0 empty=0
+Time=2505000 rst_n=1 wr_en=0 rd_en=0 wr_data=4fe416c rd_data=c8535b2a full=0 empty=0
+Time=2525000 rst_n=1 wr_en=0 rd_en=1 wr_data=4fe416c rd_data=c8535b2a full=0 empty=0
+Time=2535000 rst_n=1 wr_en=0 rd_en=0 wr_data=4fe416c rd_data=aaf28743 full=0 empty=0
+Time=2555000 rst_n=1 wr_en=0 rd_en=1 wr_data=4fe416c rd_data=aaf28743 full=0 empty=0
+Time=2565000 rst_n=1 wr_en=0 rd_en=0 wr_data=4fe416c rd_data=1a73b4fb full=0 empty=0
+Time=2585000 rst_n=1 wr_en=1 rd_en=0 wr_data=915617d rd_data=1a73b4fb full=0 empty=0
+Time=2595000 rst_n=1 wr_en=0 rd_en=0 wr_data=915617d rd_data=1a73b4fb full=0 empty=0
+Time=2615000 rst_n=1 wr_en=1 rd_en=0 wr_data=cba6b1c7 rd_data=1a73b4fb full=0 empty=0
+Time=2625000 rst_n=1 wr_en=0 rd_en=0 wr_data=cba6b1c7 rd_data=1a73b4fb full=0 empty=0
+Time=2645000 rst_n=1 wr_en=1 rd_en=0 wr_data=f53c9ee3 rd_data=1a73b4fb full=0 empty=0
+Time=2655000 rst_n=1 wr_en=0 rd_en=0 wr_data=f53c9ee3 rd_data=1a73b4fb full=0 empty=0
+Time=2675000 rst_n=1 wr_en=0 rd_en=1 wr_data=f53c9ee3 rd_data=1a73b4fb full=0 empty=0
+Time=2685000 rst_n=1 wr_en=0 rd_en=0 wr_data=f53c9ee3 rd_data=c658125a full=0 empty=0
+Time=2705000 rst_n=1 wr_en=1 rd_en=0 wr_data=bd764fbf rd_data=c658125a full=0 empty=0
+Time=2715000 rst_n=1 wr_en=0 rd_en=0 wr_data=bd764fbf rd_data=c658125a full=0 empty=0
+Time=2735000 rst_n=1 wr_en=0 rd_en=1 wr_data=bd764fbf rd_data=c658125a full=0 empty=0
+Time=2745000 rst_n=1 wr_en=0 rd_en=0 wr_data=bd764fbf rd_data=d165f362 full=0 empty=0
+Time=2765000 rst_n=1 wr_en=0 rd_en=1 wr_data=bd764fbf rd_data=d165f362 full=0 empty=0
+Time=2775000 rst_n=1 wr_en=0 rd_en=0 wr_data=bd764fbf rd_data=f130ef30 full=0 empty=0
+Time=2795000 rst_n=1 wr_en=1 rd_en=0 wr_data=ce6f717c rd_data=f130ef30 full=0 empty=0
+Time=2805000 rst_n=1 wr_en=0 rd_en=0 wr_data=ce6f717c rd_data=f130ef30 full=0 empty=0
+Time=2825000 rst_n=1 wr_en=1 rd_en=0 wr_data=a2210bf3 rd_data=f130ef30 full=0 empty=0
+Time=2835000 rst_n=1 wr_en=0 rd_en=0 wr_data=a2210bf3 rd_data=f130ef30 full=0 empty=0
+Time=2855000 rst_n=1 wr_en=0 rd_en=1 wr_data=a2210bf3 rd_data=f130ef30 full=0 empty=0
+Time=2865000 rst_n=1 wr_en=0 rd_en=0 wr_data=a2210bf3 rd_data=bb9d586d full=0 empty=0
+Time=2885000 rst_n=1 wr_en=0 rd_en=1 wr_data=a2210bf3 rd_data=bb9d586d full=0 empty=0
+Time=2895000 rst_n=1 wr_en=0 rd_en=0 wr_data=a2210bf3 rd_data=ed0e5eaa full=0 empty=0
+Time=2915000 rst_n=1 wr_en=0 rd_en=1 wr_data=a2210bf3 rd_data=ed0e5eaa full=0 empty=0
+Time=2925000 rst_n=1 wr_en=0 rd_en=0 wr_data=a2210bf3 rd_data=584017f full=0 empty=0
+Time=2945000 rst_n=1 wr_en=0 rd_en=1 wr_data=a2210bf3 rd_data=584017f full=0 empty=0
+Time=2955000 rst_n=1 wr_en=0 rd_en=0 wr_data=a2210bf3 rd_data=4fe416c full=0 empty=0
+Time=2975000 rst_n=1 wr_en=0 rd_en=1 wr_data=a2210bf3 rd_data=4fe416c full=0 empty=0
+Time=2985000 rst_n=1 wr_en=0 rd_en=0 wr_data=a2210bf3 rd_data=915617d full=0 empty=0
+UVM_INFO C:/Xilinx/Vivado/2024.2/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv(19968) @ 2995000: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
+UVM_INFO C:/Xilinx/Vivado/2024.2/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv(13673) @ 2995000: reporter [UVM/REPORT/SERVER] 
+--- UVM Report Summary ---
+
+** Report counts by severity
+UVM_INFO :    4
+UVM_WARNING :    2
+UVM_ERROR :    0
+UVM_FATAL :    0
+** Report counts by id
+[RNTST]     1
+[TEST_DONE]     1
+[TPRGED]     2
+[UVM/COMP/NAMECHECK]     1
+[UVM/RELNOTES]     1
+
+$finish called at time : 2995 ns : File "C:/Xilinx/Vivado/2024.2/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv" Line 18699
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'fifo_tb_top_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 100000ns
+launch_simulation: Time (s): cpu = 00:00:02 ; elapsed = 00:00:31 . Memory (MB): peak = 1289.941 ; gain = 19.254
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+exit
+INFO: [Common 17-206] Exiting Vivado at Fri Feb  7 22:15:15 2025...

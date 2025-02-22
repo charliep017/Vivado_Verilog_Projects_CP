@@ -1,0 +1,10 @@
+0.7
+2020.2
+Nov  8 2024
+22:36:57
+C:/Xilinx/Vivado/2024.2/data/system_verilog/uvm_1.2/uvm_macros.svh,1731132072,verilog,,,,,,,,,,,,
+H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.sim/sim_1/behav/xsim/glbl.v,1724786425,verilog,,,,glbl,,uvm,,UVM_NO_DPI;UVM_NO_XML_PARSER,,,,
+H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_if.sv,1738985123,systemVerilog,,H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv,,alu_if,,uvm,C:/Xilinx/Vivado/2024.2/data/system_verilog/uvm_1.2,UVM_NO_DPI;UVM_NO_XML_PARSER,,,,
+H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv,1738985333,systemVerilog,H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_tb_top.sv,H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_tb_top.sv,C:/Xilinx/Vivado/2024.2/data/system_verilog/uvm_1.2/uvm_macros.svh,alu_pkg,,uvm,C:/Xilinx/Vivado/2024.2/data/system_verilog/uvm_1.2,UVM_NO_DPI;UVM_NO_XML_PARSER,,,,
+H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_tb_top.sv,1738985758,systemVerilog,,,H:/Vivado_fpga/Personal/project_6_ALU_UVM/project_6_ALU_UVM.srcs/sources_1/new/alu.sv;C:/Xilinx/Vivado/2024.2/data/system_verilog/uvm_1.2/uvm_macros.svh,alu_tb_top,,uvm,C:/Xilinx/Vivado/2024.2/data/system_verilog/uvm_1.2,UVM_NO_DPI;UVM_NO_XML_PARSER,,,,
+H:/Vivado_fpga/Personal/project_6_ALU_UVM/project_6_ALU_UVM.srcs/sources_1/new/alu.sv,1738985179,verilog,,,,alu,,,,,,,,

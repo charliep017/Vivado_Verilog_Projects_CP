@@ -1,0 +1,363 @@
+#-----------------------------------------------------------
+# Vivado v2024.2 (64-bit)
+# SW Build 5239630 on Fri Nov 08 22:35:27 MST 2024
+# IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
+# SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
+# Start of session at: Wed Feb  5 20:52:35 2025
+# Process ID         : 42408
+# Current directory  : H:/Vivado_fpga/PROJECTS/Finite_State_Machine_Traffic_Light
+# Command line       : vivado.exe -gui_launcher_event rodinguilauncherevent18108 H:\Vivado_fpga\PROJECTS\Finite_State_Machine_Traffic_Light\Finite_State_Machine_Traffic_Light.xpr
+# Log file           : H:/Vivado_fpga/PROJECTS/Finite_State_Machine_Traffic_Light/vivado.log
+# Journal file       : H:/Vivado_fpga/PROJECTS/Finite_State_Machine_Traffic_Light\vivado.jou
+# Running On         : DESKTOP-K6AEKB4
+# Platform           : Windows Server 2016 or Windows 10
+# Operating System   : 19045
+# Processor Detail   : 12th Gen Intel(R) Core(TM) i9-12900K
+# CPU Frequency      : 3187 MHz
+# CPU Physical cores : 16
+# CPU Logical cores  : 24
+# Host memory        : 34141 MB
+# Swap memory        : 6174 MB
+# Total Virtual      : 40315 MB
+# Available Virtual  : 11102 MB
+#-----------------------------------------------------------
+start_gui
+open_project H:/Vivado_fpga/PROJECTS/Finite_State_Machine_Traffic_Light/Finite_State_Machine_Traffic_Light.xpr
+INFO: [filemgmt 56-3] Default IP Output Path : Could not find the directory 'H:/Vivado_fpga/PROJECTS/Finite_State_Machine_Traffic_Light/Finite_State_Machine_Traffic_Light.gen/sources_1'.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2024.2/data/ip'.
+update_compile_order -fileset sources_1
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [H:\Vivado_fpga\PROJECTS\Finite_State_Machine_Traffic_Light\Finite_State_Machine_Traffic_Light.srcs\sim_1\new\tb_traffic_light_fsm.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [H:\Vivado_fpga\PROJECTS\Finite_State_Machine_Traffic_Light\Finite_State_Machine_Traffic_Light.srcs\sources_1\new\traffic_light_fsm.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [H:\Vivado_fpga\PROJECTS\Finite_State_Machine_Traffic_Light\Finite_State_Machine_Traffic_Light.srcs\sim_1\new\tb_traffic_light_fsm.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [H:\Vivado_fpga\PROJECTS\Finite_State_Machine_Traffic_Light\Finite_State_Machine_Traffic_Light.srcs\sim_1\new\tb_traffic_light_fsm.sv:]
+ERROR: [Common 17-180] Spawn failed: No error
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'tb_traffic_light_fsm'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'H:/Vivado_fpga/PROJECTS/Finite_State_Machine_Traffic_Light/Finite_State_Machine_Traffic_Light.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/Vivado/2024.2/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_traffic_light_fsm' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'H:/Vivado_fpga/PROJECTS/Finite_State_Machine_Traffic_Light/Finite_State_Machine_Traffic_Light.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_traffic_light_fsm_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "H:/Vivado_fpga/PROJECTS/Finite_State_Machine_Traffic_Light/Finite_State_Machine_Traffic_Light.srcs/sources_1/new/traffic_light_fsm.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module traffic_light_fsm
+INFO: [VRFC 10-2263] Analyzing Verilog file "H:/Vivado_fpga/PROJECTS/Finite_State_Machine_Traffic_Light/Finite_State_Machine_Traffic_Light.srcs/sim_1/new/tb_traffic_light_fsm.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_traffic_light_fsm
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'H:/Vivado_fpga/PROJECTS/Finite_State_Machine_Traffic_Light/Finite_State_Machine_Traffic_Light.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_traffic_light_fsm_behav xil_defaultlib.tb_traffic_light_fsm xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2024.2.0
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2024.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_traffic_light_fsm_behav xil_defaultlib.tb_traffic_light_fsm xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.traffic_light_fsm
+Compiling module xil_defaultlib.tb_traffic_light_fsm
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_traffic_light_fsm_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'H:/Vivado_fpga/PROJECTS/Finite_State_Machine_Traffic_Light/Finite_State_Machine_Traffic_Light.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_traffic_light_fsm_behav -key {Behavioral:sim_1:Functional:tb_traffic_light_fsm} -tclbatch {tb_traffic_light_fsm.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+source tb_traffic_light_fsm.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+Time: 0 ns | Lights: 000
+Time: 10 ns | Lights: 100
+Time: 20 ns | Lights: 100
+Time: 30 ns | Lights: 100
+Time: 40 ns | Lights: 100
+Time: 50 ns | Lights: 100
+Time: 60 ns | Lights: 100
+Time: 70 ns | Lights: 100
+Time: 80 ns | Lights: 100
+Time: 90 ns | Lights: 100
+Time: 100 ns | Lights: 100
+Time: 110 ns | Lights: 001
+Time: 120 ns | Lights: 001
+Time: 130 ns | Lights: 001
+Time: 140 ns | Lights: 001
+Time: 150 ns | Lights: 001
+Time: 160 ns | Lights: 001
+Time: 170 ns | Lights: 001
+Time: 180 ns | Lights: 001
+Time: 190 ns | Lights: 001
+Time: 200 ns | Lights: 001
+Time: 210 ns | Lights: 010
+Time: 220 ns | Lights: 010
+Time: 230 ns | Lights: 010
+Time: 240 ns | Lights: 010
+Time: 250 ns | Lights: 010
+Time: 260 ns | Lights: 010
+Time: 270 ns | Lights: 010
+Time: 280 ns | Lights: 010
+Time: 290 ns | Lights: 010
+Time: 300 ns | Lights: 010
+Time: 310 ns | Lights: 100
+Time: 320 ns | Lights: 100
+Time: 330 ns | Lights: 100
+Time: 340 ns | Lights: 100
+Time: 350 ns | Lights: 100
+Time: 360 ns | Lights: 100
+Time: 370 ns | Lights: 100
+Time: 380 ns | Lights: 100
+Time: 390 ns | Lights: 100
+Time: 400 ns | Lights: 100
+Time: 410 ns | Lights: 001
+Time: 420 ns | Lights: 001
+Time: 430 ns | Lights: 001
+Time: 440 ns | Lights: 001
+Time: 450 ns | Lights: 001
+Time: 460 ns | Lights: 001
+Time: 470 ns | Lights: 001
+Time: 480 ns | Lights: 001
+Time: 490 ns | Lights: 001
+Time: 500 ns | Lights: 001
+Time: 510 ns | Lights: 010
+Time: 520 ns | Lights: 010
+Time: 530 ns | Lights: 010
+Time: 540 ns | Lights: 010
+Time: 550 ns | Lights: 010
+Time: 560 ns | Lights: 010
+Time: 570 ns | Lights: 010
+Time: 580 ns | Lights: 010
+Time: 590 ns | Lights: 010
+Time: 600 ns | Lights: 010
+Time: 610 ns | Lights: 100
+Time: 620 ns | Lights: 100
+Time: 630 ns | Lights: 100
+Time: 640 ns | Lights: 100
+Time: 650 ns | Lights: 100
+Time: 660 ns | Lights: 100
+Time: 670 ns | Lights: 100
+Time: 680 ns | Lights: 100
+Time: 690 ns | Lights: 100
+Time: 700 ns | Lights: 100
+Time: 710 ns | Lights: 001
+Time: 720 ns | Lights: 001
+Time: 730 ns | Lights: 001
+Time: 740 ns | Lights: 001
+Time: 750 ns | Lights: 001
+Time: 760 ns | Lights: 001
+Time: 770 ns | Lights: 001
+Time: 780 ns | Lights: 001
+Time: 790 ns | Lights: 001
+Time: 800 ns | Lights: 001
+Time: 810 ns | Lights: 010
+Time: 820 ns | Lights: 010
+Time: 830 ns | Lights: 010
+Time: 840 ns | Lights: 010
+Time: 850 ns | Lights: 010
+Time: 860 ns | Lights: 010
+Time: 870 ns | Lights: 010
+Time: 880 ns | Lights: 010
+Time: 890 ns | Lights: 010
+Time: 900 ns | Lights: 010
+Time: 910 ns | Lights: 100
+Time: 920 ns | Lights: 100
+Time: 930 ns | Lights: 100
+Time: 940 ns | Lights: 100
+Time: 950 ns | Lights: 100
+Time: 960 ns | Lights: 100
+Time: 970 ns | Lights: 100
+Time: 980 ns | Lights: 100
+Time: 990 ns | Lights: 100
+Time: 1000 ns | Lights: 100
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_traffic_light_fsm_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1270.340 ; gain = 25.980
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [H:\Vivado_fpga\PROJECTS\Finite_State_Machine_Traffic_Light\Finite_State_Machine_Traffic_Light.srcs\sim_1\new\tb_traffic_light_fsm.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [H:\Vivado_fpga\PROJECTS\Finite_State_Machine_Traffic_Light\Finite_State_Machine_Traffic_Light.srcs\sources_1\new\traffic_light_fsm.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [H:\Vivado_fpga\PROJECTS\Finite_State_Machine_Traffic_Light\Finite_State_Machine_Traffic_Light.srcs\sim_1\new\tb_traffic_light_fsm.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [H:\Vivado_fpga\PROJECTS\Finite_State_Machine_Traffic_Light\Finite_State_Machine_Traffic_Light.srcs\sim_1\new\tb_traffic_light_fsm.sv:]
+ERROR: [Common 17-180] Spawn failed: No error
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'tb_traffic_light_fsm'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'H:/Vivado_fpga/PROJECTS/Finite_State_Machine_Traffic_Light/Finite_State_Machine_Traffic_Light.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/Vivado/2024.2/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_traffic_light_fsm' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'H:/Vivado_fpga/PROJECTS/Finite_State_Machine_Traffic_Light/Finite_State_Machine_Traffic_Light.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_traffic_light_fsm_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "H:/Vivado_fpga/PROJECTS/Finite_State_Machine_Traffic_Light/Finite_State_Machine_Traffic_Light.srcs/sources_1/new/traffic_light_fsm.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module traffic_light_fsm
+INFO: [VRFC 10-2263] Analyzing Verilog file "H:/Vivado_fpga/PROJECTS/Finite_State_Machine_Traffic_Light/Finite_State_Machine_Traffic_Light.srcs/sim_1/new/tb_traffic_light_fsm.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_traffic_light_fsm
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'H:/Vivado_fpga/PROJECTS/Finite_State_Machine_Traffic_Light/Finite_State_Machine_Traffic_Light.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_traffic_light_fsm_behav xil_defaultlib.tb_traffic_light_fsm xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2024.2.0
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2024.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_traffic_light_fsm_behav xil_defaultlib.tb_traffic_light_fsm xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.traffic_light_fsm
+Compiling module xil_defaultlib.tb_traffic_light_fsm
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_traffic_light_fsm_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'H:/Vivado_fpga/PROJECTS/Finite_State_Machine_Traffic_Light/Finite_State_Machine_Traffic_Light.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_traffic_light_fsm_behav -key {Behavioral:sim_1:Functional:tb_traffic_light_fsm} -tclbatch {tb_traffic_light_fsm.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+source tb_traffic_light_fsm.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+Time: 0 ns | Lights: 000
+Time: 10 ns | Lights: 100
+Time: 20 ns | Lights: 100
+Time: 30 ns | Lights: 100
+Time: 40 ns | Lights: 100
+Time: 50 ns | Lights: 100
+Time: 60 ns | Lights: 100
+Time: 70 ns | Lights: 100
+Time: 80 ns | Lights: 100
+Time: 90 ns | Lights: 100
+Time: 100 ns | Lights: 100
+Time: 110 ns | Lights: 001
+Time: 120 ns | Lights: 001
+Time: 130 ns | Lights: 001
+Time: 140 ns | Lights: 001
+Time: 150 ns | Lights: 001
+Time: 160 ns | Lights: 001
+Time: 170 ns | Lights: 001
+Time: 180 ns | Lights: 001
+Time: 190 ns | Lights: 001
+Time: 200 ns | Lights: 001
+Time: 210 ns | Lights: 010
+Time: 220 ns | Lights: 010
+Time: 230 ns | Lights: 010
+Time: 240 ns | Lights: 010
+Time: 250 ns | Lights: 010
+Time: 260 ns | Lights: 010
+Time: 270 ns | Lights: 010
+Time: 280 ns | Lights: 010
+Time: 290 ns | Lights: 010
+Time: 300 ns | Lights: 010
+Time: 310 ns | Lights: 100
+Time: 320 ns | Lights: 100
+Time: 330 ns | Lights: 100
+Time: 340 ns | Lights: 100
+Time: 350 ns | Lights: 100
+Time: 360 ns | Lights: 100
+Time: 370 ns | Lights: 100
+Time: 380 ns | Lights: 100
+Time: 390 ns | Lights: 100
+Time: 400 ns | Lights: 100
+Time: 410 ns | Lights: 001
+Time: 420 ns | Lights: 001
+Time: 430 ns | Lights: 001
+Time: 440 ns | Lights: 001
+Time: 450 ns | Lights: 001
+Time: 460 ns | Lights: 001
+Time: 470 ns | Lights: 001
+Time: 480 ns | Lights: 001
+Time: 490 ns | Lights: 001
+Time: 500 ns | Lights: 001
+Time: 510 ns | Lights: 010
+Time: 520 ns | Lights: 010
+Time: 530 ns | Lights: 010
+Time: 540 ns | Lights: 010
+Time: 550 ns | Lights: 010
+Time: 560 ns | Lights: 010
+Time: 570 ns | Lights: 010
+Time: 580 ns | Lights: 010
+Time: 590 ns | Lights: 010
+Time: 600 ns | Lights: 010
+Time: 610 ns | Lights: 100
+Time: 620 ns | Lights: 100
+Time: 630 ns | Lights: 100
+Time: 640 ns | Lights: 100
+Time: 650 ns | Lights: 100
+Time: 660 ns | Lights: 100
+Time: 670 ns | Lights: 100
+Time: 680 ns | Lights: 100
+Time: 690 ns | Lights: 100
+Time: 700 ns | Lights: 100
+Time: 710 ns | Lights: 001
+Time: 720 ns | Lights: 001
+Time: 730 ns | Lights: 001
+Time: 740 ns | Lights: 001
+Time: 750 ns | Lights: 001
+Time: 760 ns | Lights: 001
+Time: 770 ns | Lights: 001
+Time: 780 ns | Lights: 001
+Time: 790 ns | Lights: 001
+Time: 800 ns | Lights: 001
+Time: 810 ns | Lights: 010
+Time: 820 ns | Lights: 010
+Time: 830 ns | Lights: 010
+Time: 840 ns | Lights: 010
+Time: 850 ns | Lights: 010
+Time: 860 ns | Lights: 010
+Time: 870 ns | Lights: 010
+Time: 880 ns | Lights: 010
+Time: 890 ns | Lights: 010
+Time: 900 ns | Lights: 010
+Time: 910 ns | Lights: 100
+Time: 920 ns | Lights: 100
+Time: 930 ns | Lights: 100
+Time: 940 ns | Lights: 100
+Time: 950 ns | Lights: 100
+Time: 960 ns | Lights: 100
+Time: 970 ns | Lights: 100
+Time: 980 ns | Lights: 100
+Time: 990 ns | Lights: 100
+Time: 1000 ns | Lights: 100
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_traffic_light_fsm_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+exit
+INFO: [Common 17-206] Exiting Vivado at Wed Feb  5 20:56:51 2025...

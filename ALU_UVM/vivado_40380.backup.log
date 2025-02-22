@@ -1,0 +1,478 @@
+#-----------------------------------------------------------
+# Vivado v2024.2 (64-bit)
+# SW Build 5239630 on Fri Nov 08 22:35:27 MST 2024
+# IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
+# SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
+# Start of session at: Sun Feb  2 15:36:38 2025
+# Process ID         : 40380
+# Current directory  : H:/Vivado_fpga/PROJECTS/ALU_UVM
+# Command line       : vivado.exe -gui_launcher_event rodinguilauncherevent9648 H:\Vivado_fpga\PROJECTS\ALU_UVM\ALU_UVM.xpr
+# Log file           : H:/Vivado_fpga/PROJECTS/ALU_UVM/vivado.log
+# Journal file       : H:/Vivado_fpga/PROJECTS/ALU_UVM\vivado.jou
+# Running On         : DESKTOP-K6AEKB4
+# Platform           : Windows Server 2016 or Windows 10
+# Operating System   : 19045
+# Processor Detail   : 12th Gen Intel(R) Core(TM) i9-12900K
+# CPU Frequency      : 3187 MHz
+# CPU Physical cores : 16
+# CPU Logical cores  : 24
+# Host memory        : 34141 MB
+# Swap memory        : 6174 MB
+# Total Virtual      : 40315 MB
+# Available Virtual  : 16293 MB
+#-----------------------------------------------------------
+start_gui
+open_project H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.xpr
+INFO: [filemgmt 56-3] Default IP Output Path : Could not find the directory 'H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.gen/sources_1'.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2024.2/data/ip'.
+update_compile_order -fileset sources_1
+set_property include_dirs C:/Xilinx/Vivado/2024.2/data/system_verilog/uvm_1.2 [get_filesets sim_1]
+set_property -name {xsim.compile.xvlog.more_options} -value {-L uvm --define UVM_NO_DPI --define UVM_NO_XML_PARSER} -objects [get_filesets sim_1]
+set_property -name {xsim.elaborate.xelab.more_options} -value {-L uvm} -objects [get_filesets sim_1]
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'alu_tb_top'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/Vivado/2024.2/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'alu_tb_top' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L uvm -L uvm --define UVM_NO_DPI --define UVM_NO_XML_PARSER -prj alu_tb_top_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_if.sv" into library xil_defaultlib
+WARNING: [VRFC 10-3824] variable 'cov' must explicitly be declared as automatic or static [H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_if.sv:64]
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_tb_top.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module alu
+INFO: [VRFC 10-311] analyzing module alu_tb_top
+INFO: [VRFC 10-2263] Analyzing Verilog file "H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip --snapshot alu_tb_top_behav xil_defaultlib.alu_tb_top xil_defaultlib.glbl -log elaborate.log -L uvm"
+Vivado Simulator v2024.2.0
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2024.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip --snapshot alu_tb_top_behav xil_defaultlib.alu_tb_top xil_defaultlib.glbl -log elaborate.log -L uvm 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4468] File : /proj/xbuilds/SWIP/2024.2_1015_2009/installs/lin64/Vivado/2024.2/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv, Line : 25994, RANDC variable size more than 8 bits. This will be treated as a RAND variable instead.
+WARNING: [XSIM 43-4100] "H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv" Line 2. Module alu_pkg has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv" Line 2. Module alu_pkg has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_tb_top.sv" Line 4. Module alu_tb_top has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "H:/Vivado_fpga/Personal/project_6_ALU_UVM/project_6_ALU_UVM.srcs/sources_1/new/alu.sv" Line 3. Module alu has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_tb_top.sv" Line 4. Module alu_tb_top has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "H:/Vivado_fpga/Personal/project_6_ALU_UVM/project_6_ALU_UVM.srcs/sources_1/new/alu.sv" Line 3. Module alu has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.sim/sim_1/behav/xsim/glbl.v" Line 6. Module glbl has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.sim/sim_1/behav/xsim/glbl.v" Line 6. Module glbl has a timescale but at least one module in design doesn't have timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package uvm.uvm_pkg
+Compiling package std.std
+Compiling package xil_defaultlib.alu_pkg
+Compiling module xil_defaultlib.alu_if_default
+Compiling module xil_defaultlib.alu
+Compiling module xil_defaultlib.alu_tb_top
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot alu_tb_top_behav
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:26 . Memory (MB): peak = 1267.617 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '26' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "alu_tb_top_behav -key {Behavioral:sim_1:Functional:alu_tb_top} -tclbatch {alu_tb_top.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+source alu_tb_top.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+UVM_INFO C:/Xilinx/Vivado/2024.2/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv(18601) @ 0: reporter [UVM/RELNOTES] 
+----------------------------------------------------------------
+UVM-1.2
+(C) 2007-2014 Mentor Graphics Corporation
+(C) 2007-2014 Cadence Design Systems, Inc.
+(C) 2006-2014 Synopsys, Inc.
+(C) 2011-2013 Cypress Semiconductor Corp.
+(C) 2013-2014 NVIDIA Corporation
+----------------------------------------------------------------
+
+  ***********       IMPORTANT RELEASE NOTES         ************
+
+  You are using a version of the UVM library that has been compiled
+  with `UVM_NO_DEPRECATED undefined.
+
+  You are using a version of the UVM library that has been compiled
+  with `UVM_OBJECT_DO_NOT_NEED_CONSTRUCTOR undefined.
+
+      (Specify +UVM_NO_RELNOTES to turn off this notice)
+
+Time=0 Interface signals:
+clk=0 rst_n=0
+a=00000000 b=00000000 op_code=0
+result=xxxxxxxx error=x
+UVM_INFO @ 0: reporter [RNTST] Running test alu_test...
+UVM_INFO C:/Xilinx/Vivado/2024.2/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv(20867) @ 0: reporter [UVM/COMP/NAMECHECK] This implementation of the component name checks requires DPI to be enabled
+Time=0 op=x a=xxxxxxxx b=xxxxxxxx result=xxxxxxxx error=x
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(216) @ 5000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Operation: 0, A: 0, B: 0
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(217) @ 5000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Expected Result: 0, Got: 0
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(218) @ 5000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Expected Error: 0, Got: 0
+Time=5000 op=0 a=00000000 b=00000000 result=00000000 error=0
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(216) @ 15000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Operation: 0, A: 0, B: 0
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(217) @ 15000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Expected Result: 0, Got: 0
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(218) @ 15000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Expected Error: 0, Got: 0
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(216) @ 25000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Operation: 0, A: 0, B: 0
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(217) @ 25000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Expected Result: 0, Got: 0
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(218) @ 25000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Expected Error: 0, Got: 0
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(216) @ 35000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Operation: 0, A: 0, B: 0
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(217) @ 35000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Expected Result: 0, Got: 0
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(218) @ 35000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Expected Error: 0, Got: 0
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(216) @ 45000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Operation: 0, A: 0, B: 0
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(217) @ 45000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Expected Result: 0, Got: 0
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(218) @ 45000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Expected Error: 0, Got: 0
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(216) @ 55000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Operation: 0, A: 0, B: 0
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(217) @ 55000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Expected Result: 0, Got: 0
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(218) @ 55000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Expected Error: 0, Got: 0
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(216) @ 65000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Operation: 0, A: 0, B: 0
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(217) @ 65000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Expected Result: 0, Got: 0
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(218) @ 65000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Expected Error: 0, Got: 0
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(216) @ 75000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Operation: 0, A: 0, B: 0
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(217) @ 75000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Expected Result: 0, Got: 0
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(218) @ 75000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Expected Error: 0, Got: 0
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(216) @ 85000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Operation: 0, A: 0, B: 0
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(217) @ 85000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Expected Result: 0, Got: 0
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(218) @ 85000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Expected Error: 0, Got: 0
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(216) @ 95000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Operation: 0, A: 0, B: 0
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(217) @ 95000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Expected Result: 0, Got: 0
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(218) @ 95000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Expected Error: 0, Got: 0
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(216) @ 105000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Operation: 0, A: 12345678, B: 87654321
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(217) @ 105000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Expected Result: 99999999, Got: 99999999
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(218) @ 105000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Expected Error: 0, Got: 0
+Time=105000 op=0 a=12345678 b=87654321 result=99999999 error=0
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(216) @ 115000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Operation: 0, A: 12345678, B: 87654321
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(217) @ 115000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Expected Result: 99999999, Got: 99999999
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(218) @ 115000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Expected Error: 0, Got: 0
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(136) @ 115000: uvm_test_top.env.driver [ALU_DRIVER] Drove: op=0 a=12345678 b=87654321 result=99999999 error=0
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(216) @ 125000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Operation: 0, A: 12345678, B: 87654321
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(217) @ 125000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Expected Result: 99999999, Got: 99999999
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(218) @ 125000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Expected Error: 0, Got: 0
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(216) @ 135000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Operation: 0, A: 12345678, B: 87654321
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(217) @ 135000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Expected Result: 99999999, Got: 99999999
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(218) @ 135000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Expected Error: 0, Got: 0
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(216) @ 145000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Operation: 0, A: 12345678, B: 87654321
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(217) @ 145000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Expected Result: 99999999, Got: 99999999
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(218) @ 145000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Expected Error: 0, Got: 0
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(216) @ 155000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Operation: 1, A: ffffffff, B: 1
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(217) @ 155000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Expected Result: fffffffe, Got: fffffffe
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(218) @ 155000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Expected Error: 0, Got: 0
+Time=155000 op=1 a=ffffffff b=00000001 result=fffffffe error=0
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(136) @ 165000: uvm_test_top.env.driver [ALU_DRIVER] Drove: op=1 a=ffffffff b=1 result=fffffffe error=0
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(216) @ 165000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Operation: 1, A: ffffffff, B: 1
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(217) @ 165000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Expected Result: fffffffe, Got: fffffffe
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(218) @ 165000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Expected Error: 0, Got: 0
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(216) @ 175000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Operation: 1, A: ffffffff, B: 1
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(217) @ 175000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Expected Result: fffffffe, Got: fffffffe
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(218) @ 175000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Expected Error: 0, Got: 0
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(216) @ 185000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Operation: 1, A: ffffffff, B: 1
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(217) @ 185000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Expected Result: fffffffe, Got: fffffffe
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(218) @ 185000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Expected Error: 0, Got: 0
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(216) @ 195000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Operation: 1, A: ffffffff, B: 1
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(217) @ 195000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Expected Result: fffffffe, Got: fffffffe
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(218) @ 195000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Expected Error: 0, Got: 0
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(216) @ 205000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Operation: 2, A: ff, B: ff
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(217) @ 205000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Expected Result: fe01, Got: fe01
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(218) @ 205000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Expected Error: 0, Got: 0
+Time=205000 op=2 a=000000ff b=000000ff result=0000fe01 error=0
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(136) @ 215000: uvm_test_top.env.driver [ALU_DRIVER] Drove: op=2 a=ff b=ff result=fe01 error=0
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(216) @ 215000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Operation: 2, A: ff, B: ff
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(217) @ 215000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Expected Result: fe01, Got: fe01
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(218) @ 215000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Expected Error: 0, Got: 0
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(216) @ 225000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Operation: 2, A: ff, B: ff
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(217) @ 225000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Expected Result: fe01, Got: fe01
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(218) @ 225000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Expected Error: 0, Got: 0
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(216) @ 235000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Operation: 2, A: ff, B: ff
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(217) @ 235000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Expected Result: fe01, Got: fe01
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(218) @ 235000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Expected Error: 0, Got: 0
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(216) @ 245000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Operation: 2, A: ff, B: ff
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(217) @ 245000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Expected Result: fe01, Got: fe01
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(218) @ 245000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Expected Error: 0, Got: 0
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(216) @ 255000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Operation: 3, A: 10000000, B: 2
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(217) @ 255000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Expected Result: 8000000, Got: 8000000
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(218) @ 255000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Expected Error: 0, Got: 0
+Time=255000 op=3 a=10000000 b=00000002 result=08000000 error=0
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(136) @ 265000: uvm_test_top.env.driver [ALU_DRIVER] Drove: op=3 a=10000000 b=2 result=8000000 error=0
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(216) @ 265000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Operation: 3, A: 10000000, B: 2
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(217) @ 265000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Expected Result: 8000000, Got: 8000000
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(218) @ 265000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Expected Error: 0, Got: 0
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(216) @ 275000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Operation: 3, A: 10000000, B: 2
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(217) @ 275000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Expected Result: 8000000, Got: 8000000
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(218) @ 275000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Expected Error: 0, Got: 0
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(216) @ 285000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Operation: 3, A: 10000000, B: 2
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(217) @ 285000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Expected Result: 8000000, Got: 8000000
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(218) @ 285000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Expected Error: 0, Got: 0
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(216) @ 295000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Operation: 3, A: 10000000, B: 2
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(217) @ 295000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Expected Result: 8000000, Got: 8000000
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(218) @ 295000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Expected Error: 0, Got: 0
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(216) @ 305000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Operation: 3, A: 12345678, B: 0
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(217) @ 305000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Expected Result: 0, Got: 0
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(218) @ 305000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Expected Error: 1, Got: 1
+Time=305000 op=3 a=12345678 b=00000000 result=00000000 error=1
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(136) @ 315000: uvm_test_top.env.driver [ALU_DRIVER] Drove: op=3 a=12345678 b=0 result=0 error=1
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(216) @ 315000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Operation: 3, A: 12345678, B: 0
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(217) @ 315000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Expected Result: 0, Got: 0
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(218) @ 315000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Expected Error: 1, Got: 1
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(216) @ 325000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Operation: 3, A: 12345678, B: 0
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(217) @ 325000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Expected Result: 0, Got: 0
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(218) @ 325000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Expected Error: 1, Got: 1
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(216) @ 335000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Operation: 3, A: 12345678, B: 0
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(217) @ 335000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Expected Result: 0, Got: 0
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(218) @ 335000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Expected Error: 1, Got: 1
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(216) @ 345000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Operation: 3, A: 12345678, B: 0
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(217) @ 345000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Expected Result: 0, Got: 0
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(218) @ 345000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Expected Error: 1, Got: 1
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(216) @ 355000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Operation: 0, A: ec867225, B: ef5ab756
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(217) @ 355000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Expected Result: dbe1297b, Got: dbe1297b
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(218) @ 355000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Expected Error: 0, Got: 0
+Time=355000 op=0 a=ec867225 b=ef5ab756 result=dbe1297b error=0
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(136) @ 365000: uvm_test_top.env.driver [ALU_DRIVER] Drove: op=0 a=ec867225 b=ef5ab756 result=dbe1297b error=0
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(216) @ 365000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Operation: 0, A: ec867225, B: ef5ab756
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(217) @ 365000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Expected Result: dbe1297b, Got: dbe1297b
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(218) @ 365000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Expected Error: 0, Got: 0
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(216) @ 375000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Operation: 0, A: ec867225, B: ef5ab756
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(217) @ 375000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Expected Result: dbe1297b, Got: dbe1297b
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(218) @ 375000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Expected Error: 0, Got: 0
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(216) @ 385000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Operation: 0, A: ec867225, B: ef5ab756
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(217) @ 385000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Expected Result: dbe1297b, Got: dbe1297b
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(218) @ 385000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Expected Error: 0, Got: 0
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(216) @ 395000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Operation: 0, A: ec867225, B: ef5ab756
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(217) @ 395000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Expected Result: dbe1297b, Got: dbe1297b
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(218) @ 395000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Expected Error: 0, Got: 0
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(216) @ 405000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Operation: 2, A: d6a21f5e, B: 2b8091ea
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(217) @ 405000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Expected Result: 7cf4e9ec, Got: 7cf4e9ec
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(218) @ 405000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Expected Error: 0, Got: 0
+Time=405000 op=2 a=d6a21f5e b=2b8091ea result=7cf4e9ec error=0
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(136) @ 415000: uvm_test_top.env.driver [ALU_DRIVER] Drove: op=2 a=d6a21f5e b=2b8091ea result=7cf4e9ec error=0
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(216) @ 415000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Operation: 2, A: d6a21f5e, B: 2b8091ea
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(217) @ 415000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Expected Result: 7cf4e9ec, Got: 7cf4e9ec
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(218) @ 415000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Expected Error: 0, Got: 0
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(216) @ 425000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Operation: 2, A: d6a21f5e, B: 2b8091ea
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(217) @ 425000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Expected Result: 7cf4e9ec, Got: 7cf4e9ec
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(218) @ 425000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Expected Error: 0, Got: 0
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(216) @ 435000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Operation: 2, A: d6a21f5e, B: 2b8091ea
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(217) @ 435000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Expected Result: 7cf4e9ec, Got: 7cf4e9ec
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(218) @ 435000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Expected Error: 0, Got: 0
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(216) @ 445000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Operation: 2, A: d6a21f5e, B: 2b8091ea
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(217) @ 445000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Expected Result: 7cf4e9ec, Got: 7cf4e9ec
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(218) @ 445000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Expected Error: 0, Got: 0
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(216) @ 455000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Operation: 1, A: e7c2697b, B: 70210e7
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(217) @ 455000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Expected Result: e0c05894, Got: e0c05894
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(218) @ 455000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Expected Error: 0, Got: 0
+Time=455000 op=1 a=e7c2697b b=070210e7 result=e0c05894 error=0
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(136) @ 465000: uvm_test_top.env.driver [ALU_DRIVER] Drove: op=1 a=e7c2697b b=70210e7 result=e0c05894 error=0
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(216) @ 465000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Operation: 1, A: e7c2697b, B: 70210e7
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(217) @ 465000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Expected Result: e0c05894, Got: e0c05894
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(218) @ 465000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Expected Error: 0, Got: 0
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(216) @ 475000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Operation: 1, A: e7c2697b, B: 70210e7
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(217) @ 475000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Expected Result: e0c05894, Got: e0c05894
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(218) @ 475000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Expected Error: 0, Got: 0
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(216) @ 485000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Operation: 1, A: e7c2697b, B: 70210e7
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(217) @ 485000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Expected Result: e0c05894, Got: e0c05894
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(218) @ 485000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Expected Error: 0, Got: 0
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(216) @ 495000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Operation: 1, A: e7c2697b, B: 70210e7
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(217) @ 495000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Expected Result: e0c05894, Got: e0c05894
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(218) @ 495000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Expected Error: 0, Got: 0
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(216) @ 505000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Operation: 1, A: 1fe75077, B: c1df3455
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(217) @ 505000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Expected Result: 5e081c22, Got: 5e081c22
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(218) @ 505000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Expected Error: 0, Got: 0
+Time=505000 op=1 a=1fe75077 b=c1df3455 result=5e081c22 error=0
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(136) @ 515000: uvm_test_top.env.driver [ALU_DRIVER] Drove: op=1 a=1fe75077 b=c1df3455 result=5e081c22 error=0
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(216) @ 515000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Operation: 1, A: 1fe75077, B: c1df3455
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(217) @ 515000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Expected Result: 5e081c22, Got: 5e081c22
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(218) @ 515000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Expected Error: 0, Got: 0
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(216) @ 525000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Operation: 1, A: 1fe75077, B: c1df3455
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(217) @ 525000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Expected Result: 5e081c22, Got: 5e081c22
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(218) @ 525000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Expected Error: 0, Got: 0
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(216) @ 535000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Operation: 1, A: 1fe75077, B: c1df3455
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(217) @ 535000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Expected Result: 5e081c22, Got: 5e081c22
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(218) @ 535000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Expected Error: 0, Got: 0
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(216) @ 545000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Operation: 1, A: 1fe75077, B: c1df3455
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(217) @ 545000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Expected Result: 5e081c22, Got: 5e081c22
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(218) @ 545000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Expected Error: 0, Got: 0
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(216) @ 555000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Operation: 1, A: bf10d48d, B: dc17fc7f
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(217) @ 555000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Expected Result: e2f8d80e, Got: e2f8d80e
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(218) @ 555000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Expected Error: 0, Got: 0
+Time=555000 op=1 a=bf10d48d b=dc17fc7f result=e2f8d80e error=0
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(136) @ 565000: uvm_test_top.env.driver [ALU_DRIVER] Drove: op=1 a=bf10d48d b=dc17fc7f result=e2f8d80e error=0
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(216) @ 565000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Operation: 1, A: bf10d48d, B: dc17fc7f
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(217) @ 565000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Expected Result: e2f8d80e, Got: e2f8d80e
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(218) @ 565000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Expected Error: 0, Got: 0
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(216) @ 575000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Operation: 1, A: bf10d48d, B: dc17fc7f
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(217) @ 575000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Expected Result: e2f8d80e, Got: e2f8d80e
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(218) @ 575000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Expected Error: 0, Got: 0
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(216) @ 585000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Operation: 1, A: bf10d48d, B: dc17fc7f
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(217) @ 585000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Expected Result: e2f8d80e, Got: e2f8d80e
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(218) @ 585000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Expected Error: 0, Got: 0
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(216) @ 595000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Operation: 1, A: bf10d48d, B: dc17fc7f
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(217) @ 595000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Expected Result: e2f8d80e, Got: e2f8d80e
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(218) @ 595000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Expected Error: 0, Got: 0
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(216) @ 605000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Operation: 2, A: c53ef520, B: 95ac68a1
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(217) @ 605000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Expected Result: f1ad2920, Got: f1ad2920
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(218) @ 605000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Expected Error: 0, Got: 0
+Time=605000 op=2 a=c53ef520 b=95ac68a1 result=f1ad2920 error=0
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(136) @ 615000: uvm_test_top.env.driver [ALU_DRIVER] Drove: op=2 a=c53ef520 b=95ac68a1 result=f1ad2920 error=0
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(216) @ 615000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Operation: 2, A: c53ef520, B: 95ac68a1
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(217) @ 615000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Expected Result: f1ad2920, Got: f1ad2920
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(218) @ 615000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Expected Error: 0, Got: 0
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(216) @ 625000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Operation: 2, A: c53ef520, B: 95ac68a1
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(217) @ 625000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Expected Result: f1ad2920, Got: f1ad2920
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(218) @ 625000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Expected Error: 0, Got: 0
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(216) @ 635000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Operation: 2, A: c53ef520, B: 95ac68a1
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(217) @ 635000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Expected Result: f1ad2920, Got: f1ad2920
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(218) @ 635000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Expected Error: 0, Got: 0
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(216) @ 645000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Operation: 2, A: c53ef520, B: 95ac68a1
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(217) @ 645000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Expected Result: f1ad2920, Got: f1ad2920
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(218) @ 645000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Expected Error: 0, Got: 0
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(216) @ 655000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Operation: 0, A: 3271b2c3, B: 2e9c7968
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(217) @ 655000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Expected Result: 610e2c2b, Got: 610e2c2b
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(218) @ 655000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Expected Error: 0, Got: 0
+Time=655000 op=0 a=3271b2c3 b=2e9c7968 result=610e2c2b error=0
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(136) @ 665000: uvm_test_top.env.driver [ALU_DRIVER] Drove: op=0 a=3271b2c3 b=2e9c7968 result=610e2c2b error=0
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(216) @ 665000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Operation: 0, A: 3271b2c3, B: 2e9c7968
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(217) @ 665000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Expected Result: 610e2c2b, Got: 610e2c2b
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(218) @ 665000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Expected Error: 0, Got: 0
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(216) @ 675000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Operation: 0, A: 3271b2c3, B: 2e9c7968
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(217) @ 675000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Expected Result: 610e2c2b, Got: 610e2c2b
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(218) @ 675000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Expected Error: 0, Got: 0
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(216) @ 685000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Operation: 0, A: 3271b2c3, B: 2e9c7968
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(217) @ 685000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Expected Result: 610e2c2b, Got: 610e2c2b
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(218) @ 685000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Expected Error: 0, Got: 0
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(216) @ 695000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Operation: 0, A: 3271b2c3, B: 2e9c7968
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(217) @ 695000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Expected Result: 610e2c2b, Got: 610e2c2b
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(218) @ 695000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Expected Error: 0, Got: 0
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(216) @ 705000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Operation: 2, A: 6a90d5c, B: 26e82eb4
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(217) @ 705000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Expected Result: d2a3ecb0, Got: d2a3ecb0
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(218) @ 705000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Expected Error: 0, Got: 0
+Time=705000 op=2 a=06a90d5c b=26e82eb4 result=d2a3ecb0 error=0
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(136) @ 715000: uvm_test_top.env.driver [ALU_DRIVER] Drove: op=2 a=6a90d5c b=26e82eb4 result=d2a3ecb0 error=0
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(216) @ 715000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Operation: 2, A: 6a90d5c, B: 26e82eb4
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(217) @ 715000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Expected Result: d2a3ecb0, Got: d2a3ecb0
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(218) @ 715000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Expected Error: 0, Got: 0
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(216) @ 725000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Operation: 2, A: 6a90d5c, B: 26e82eb4
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(217) @ 725000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Expected Result: d2a3ecb0, Got: d2a3ecb0
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(218) @ 725000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Expected Error: 0, Got: 0
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(216) @ 735000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Operation: 2, A: 6a90d5c, B: 26e82eb4
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(217) @ 735000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Expected Result: d2a3ecb0, Got: d2a3ecb0
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(218) @ 735000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Expected Error: 0, Got: 0
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(216) @ 745000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Operation: 2, A: 6a90d5c, B: 26e82eb4
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(217) @ 745000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Expected Result: d2a3ecb0, Got: d2a3ecb0
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(218) @ 745000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Expected Error: 0, Got: 0
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(216) @ 755000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Operation: 0, A: 1e504b9, B: 3e8f885a
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(217) @ 755000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Expected Result: 40748d13, Got: 40748d13
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(218) @ 755000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Expected Error: 0, Got: 0
+Time=755000 op=0 a=01e504b9 b=3e8f885a result=40748d13 error=0
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(136) @ 765000: uvm_test_top.env.driver [ALU_DRIVER] Drove: op=0 a=1e504b9 b=3e8f885a result=40748d13 error=0
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(216) @ 765000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Operation: 0, A: 1e504b9, B: 3e8f885a
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(217) @ 765000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Expected Result: 40748d13, Got: 40748d13
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(218) @ 765000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Expected Error: 0, Got: 0
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(216) @ 775000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Operation: 0, A: 1e504b9, B: 3e8f885a
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(217) @ 775000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Expected Result: 40748d13, Got: 40748d13
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(218) @ 775000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Expected Error: 0, Got: 0
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(216) @ 785000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Operation: 0, A: 1e504b9, B: 3e8f885a
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(217) @ 785000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Expected Result: 40748d13, Got: 40748d13
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(218) @ 785000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Expected Error: 0, Got: 0
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(216) @ 795000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Operation: 0, A: 1e504b9, B: 3e8f885a
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(217) @ 795000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Expected Result: 40748d13, Got: 40748d13
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(218) @ 795000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Expected Error: 0, Got: 0
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(216) @ 805000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Operation: 3, A: 242598f5, B: f592865c
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(217) @ 805000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Expected Result: 0, Got: 0
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(218) @ 805000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Expected Error: 0, Got: 0
+Time=805000 op=3 a=242598f5 b=f592865c result=00000000 error=0
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(136) @ 815000: uvm_test_top.env.driver [ALU_DRIVER] Drove: op=3 a=242598f5 b=f592865c result=0 error=0
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(216) @ 815000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Operation: 3, A: 242598f5, B: f592865c
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(217) @ 815000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Expected Result: 0, Got: 0
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(218) @ 815000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Expected Error: 0, Got: 0
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(216) @ 825000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Operation: 3, A: 242598f5, B: f592865c
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(217) @ 825000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Expected Result: 0, Got: 0
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(218) @ 825000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Expected Error: 0, Got: 0
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(216) @ 835000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Operation: 3, A: 242598f5, B: f592865c
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(217) @ 835000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Expected Result: 0, Got: 0
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(218) @ 835000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Expected Error: 0, Got: 0
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(216) @ 845000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Operation: 3, A: 242598f5, B: f592865c
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(217) @ 845000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Expected Result: 0, Got: 0
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(218) @ 845000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Expected Error: 0, Got: 0
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(216) @ 855000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Operation: 1, A: ed6ac9fb, B: 8bf128c5
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(217) @ 855000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Expected Result: 6179a136, Got: 6179a136
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(218) @ 855000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Expected Error: 0, Got: 0
+Time=855000 op=1 a=ed6ac9fb b=8bf128c5 result=6179a136 error=0
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(136) @ 865000: uvm_test_top.env.driver [ALU_DRIVER] Drove: op=1 a=ed6ac9fb b=8bf128c5 result=6179a136 error=0
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(216) @ 865000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Operation: 1, A: ed6ac9fb, B: 8bf128c5
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(217) @ 865000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Expected Result: 6179a136, Got: 6179a136
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(218) @ 865000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Expected Error: 0, Got: 0
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(216) @ 875000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Operation: 1, A: ed6ac9fb, B: 8bf128c5
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(217) @ 875000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Expected Result: 6179a136, Got: 6179a136
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(218) @ 875000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Expected Error: 0, Got: 0
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(216) @ 885000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Operation: 1, A: ed6ac9fb, B: 8bf128c5
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(217) @ 885000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Expected Result: 6179a136, Got: 6179a136
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(218) @ 885000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Expected Error: 0, Got: 0
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(216) @ 895000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Operation: 1, A: ed6ac9fb, B: 8bf128c5
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(217) @ 895000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Expected Result: 6179a136, Got: 6179a136
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(218) @ 895000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Expected Error: 0, Got: 0
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(216) @ 905000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Operation: 2, A: ddb4981e, B: c1ab6fd8
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(217) @ 905000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Expected Result: 985f5b50, Got: 985f5b50
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(218) @ 905000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Expected Error: 0, Got: 0
+Time=905000 op=2 a=ddb4981e b=c1ab6fd8 result=985f5b50 error=0
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(136) @ 915000: uvm_test_top.env.driver [ALU_DRIVER] Drove: op=2 a=ddb4981e b=c1ab6fd8 result=985f5b50 error=0
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(216) @ 915000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Operation: 2, A: ddb4981e, B: c1ab6fd8
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(217) @ 915000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Expected Result: 985f5b50, Got: 985f5b50
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(218) @ 915000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Expected Error: 0, Got: 0
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(216) @ 925000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Operation: 2, A: ddb4981e, B: c1ab6fd8
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(217) @ 925000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Expected Result: 985f5b50, Got: 985f5b50
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(218) @ 925000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Expected Error: 0, Got: 0
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(216) @ 935000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Operation: 2, A: ddb4981e, B: c1ab6fd8
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(217) @ 935000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Expected Result: 985f5b50, Got: 985f5b50
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(218) @ 935000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Expected Error: 0, Got: 0
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(216) @ 945000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Operation: 2, A: ddb4981e, B: c1ab6fd8
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(217) @ 945000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Expected Result: 985f5b50, Got: 985f5b50
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(218) @ 945000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Expected Error: 0, Got: 0
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(216) @ 955000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Operation: 0, A: f503030d, B: 96c15b44
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(217) @ 955000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Expected Result: 8bc45e51, Got: 8bc45e51
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(218) @ 955000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Expected Error: 0, Got: 0
+Time=955000 op=0 a=f503030d b=96c15b44 result=8bc45e51 error=0
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(136) @ 965000: uvm_test_top.env.driver [ALU_DRIVER] Drove: op=0 a=f503030d b=96c15b44 result=8bc45e51 error=0
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(216) @ 965000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Operation: 0, A: f503030d, B: 96c15b44
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(217) @ 965000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Expected Result: 8bc45e51, Got: 8bc45e51
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(218) @ 965000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Expected Error: 0, Got: 0
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(216) @ 975000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Operation: 0, A: f503030d, B: 96c15b44
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(217) @ 975000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Expected Result: 8bc45e51, Got: 8bc45e51
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(218) @ 975000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Expected Error: 0, Got: 0
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(216) @ 985000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Operation: 0, A: f503030d, B: 96c15b44
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(217) @ 985000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Expected Result: 8bc45e51, Got: 8bc45e51
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(218) @ 985000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Expected Error: 0, Got: 0
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(216) @ 995000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Operation: 0, A: f503030d, B: 96c15b44
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(217) @ 995000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Expected Result: 8bc45e51, Got: 8bc45e51
+UVM_INFO H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.srcs/sim_1/new/alu_pkg.sv(218) @ 995000: uvm_test_top.env.scoreboard [ALU_SCOREBOARD] Expected Error: 0, Got: 0
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'alu_tb_top_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:30 . Memory (MB): peak = 1285.746 ; gain = 18.129
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+exit
+INFO: [Common 17-206] Exiting Vivado at Sun Feb  2 15:39:27 2025...

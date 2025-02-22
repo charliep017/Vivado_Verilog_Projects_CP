@@ -1,0 +1,13 @@
+# compile verilog/system verilog design source files
+sv xil_defaultlib  -i "C:/Xilinx/Vivado/2024.2/data/system_verilog/uvm_1.2" \
+"../../../../FIFO_UVM.srcs/sim_1/new/fifo_test_pkg.sv" \
+"../../../../FIFO_UVM.srcs/sim_1/new/fifo_test.sv" \
+"../../../../FIFO_UVM.srcs/sim_1/new/fifo_pkg.sv" \
+"../../../../FIFO_UVM.srcs/sim_1/new/sync_fifo.sv" \
+"../../../../FIFO_UVM.srcs/sim_1/new/fifo_tb_top.sv" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

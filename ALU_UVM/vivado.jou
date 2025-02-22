@@ -1,0 +1,46 @@
+#-----------------------------------------------------------
+# Vivado v2024.2 (64-bit)
+# SW Build 5239630 on Fri Nov 08 22:35:27 MST 2024
+# IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
+# SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
+# Start of session at: Fri Feb  7 22:15:25 2025
+# Process ID         : 4216
+# Current directory  : H:/Vivado_fpga/PROJECTS/ALU_UVM
+# Command line       : vivado.exe -gui_launcher_event rodinguilauncherevent7460 H:\Vivado_fpga\PROJECTS\ALU_UVM\ALU_UVM.xpr
+# Log file           : H:/Vivado_fpga/PROJECTS/ALU_UVM/vivado.log
+# Journal file       : H:/Vivado_fpga/PROJECTS/ALU_UVM\vivado.jou
+# Running On         : DESKTOP-K6AEKB4
+# Platform           : Windows Server 2016 or Windows 10
+# Operating System   : 19045
+# Processor Detail   : 12th Gen Intel(R) Core(TM) i9-12900K
+# CPU Frequency      : 3187 MHz
+# CPU Physical cores : 16
+# CPU Logical cores  : 24
+# Host memory        : 34141 MB
+# Swap memory        : 8589 MB
+# Total Virtual      : 42731 MB
+# Available Virtual  : 14480 MB
+#-----------------------------------------------------------
+start_gui
+open_project H:/Vivado_fpga/PROJECTS/ALU_UVM/ALU_UVM.xpr
+update_compile_order -fileset sources_1
+launch_simulation
+source alu_tb_top.tcl
+close_sim
+update_compile_order -fileset sim_1
+launch_simulation
+source alu_tb_top.tcl
+close_sim
+launch_simulation
+source alu_tb_top.tcl
+update_compile_order -fileset sim_1
+close_sim
+launch_simulation
+source alu_tb_top.tcl
+close_sim
+launch_simulation
+source alu_tb_top.tcl
+close_sim
+launch_simulation
+source alu_tb_top.tcl
+close_sim

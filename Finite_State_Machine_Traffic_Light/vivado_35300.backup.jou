@@ -1,0 +1,52 @@
+#-----------------------------------------------------------
+# Vivado v2024.2 (64-bit)
+# SW Build 5239630 on Fri Nov 08 22:35:27 MST 2024
+# IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
+# SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
+# Start of session at: Sun Jan 26 14:31:38 2025
+# Process ID         : 35300
+# Current directory  : H:/Vivado_fpga/PROJECTS/Finite_State_Machine_Traffic_Light
+# Command line       : vivado.exe -gui_launcher_event rodinguilauncherevent30420 H:\Vivado_fpga\PROJECTS\Finite_State_Machine_Traffic_Light\Finite_State_Machine_Traffic_Light.xpr
+# Log file           : H:/Vivado_fpga/PROJECTS/Finite_State_Machine_Traffic_Light/vivado.log
+# Journal file       : H:/Vivado_fpga/PROJECTS/Finite_State_Machine_Traffic_Light\vivado.jou
+# Running On         : DESKTOP-K6AEKB4
+# Platform           : Windows Server 2016 or Windows 10
+# Operating System   : 19045
+# Processor Detail   : 12th Gen Intel(R) Core(TM) i9-12900K
+# CPU Frequency      : 3187 MHz
+# CPU Physical cores : 16
+# CPU Logical cores  : 24
+# Host memory        : 34141 MB
+# Swap memory        : 6174 MB
+# Total Virtual      : 40315 MB
+# Available Virtual  : 15332 MB
+#-----------------------------------------------------------
+start_gui
+open_project H:/Vivado_fpga/PROJECTS/Finite_State_Machine_Traffic_Light/Finite_State_Machine_Traffic_Light.xpr
+file mkdir H:/Vivado_fpga/PROJECTS/Finite_State_Machine_Traffic_Light/Finite_State_Machine_Traffic_Light.srcs/sources_1/new
+close [ open H:/Vivado_fpga/PROJECTS/Finite_State_Machine_Traffic_Light/Finite_State_Machine_Traffic_Light.srcs/sources_1/new/traffic_light_fsm.sv w ]
+add_files H:/Vivado_fpga/PROJECTS/Finite_State_Machine_Traffic_Light/Finite_State_Machine_Traffic_Light.srcs/sources_1/new/traffic_light_fsm.sv
+update_compile_order -fileset sources_1
+set_property used_in_implementation false [get_files  H:/Vivado_fpga/PROJECTS/Finite_State_Machine_Traffic_Light/Finite_State_Machine_Traffic_Light.srcs/sources_1/new/traffic_light_fsm.sv]
+set_property used_in_synthesis false [get_files  H:/Vivado_fpga/PROJECTS/Finite_State_Machine_Traffic_Light/Finite_State_Machine_Traffic_Light.srcs/sources_1/new/traffic_light_fsm.sv]
+update_compile_order -fileset sources_1
+file mkdir H:/Vivado_fpga/PROJECTS/Finite_State_Machine_Traffic_Light/Finite_State_Machine_Traffic_Light.srcs/sim_1/new
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+close [ open H:/Vivado_fpga/PROJECTS/Finite_State_Machine_Traffic_Light/Finite_State_Machine_Traffic_Light.srcs/sim_1/new/tb_traffic_light_fsm.sv w ]
+add_files -fileset sim_1 H:/Vivado_fpga/PROJECTS/Finite_State_Machine_Traffic_Light/Finite_State_Machine_Traffic_Light.srcs/sim_1/new/tb_traffic_light_fsm.sv
+update_compile_order -fileset sim_1
+set_property used_in_synthesis true [get_files  H:/Vivado_fpga/PROJECTS/Finite_State_Machine_Traffic_Light/Finite_State_Machine_Traffic_Light.srcs/sources_1/new/traffic_light_fsm.sv]
+set_property used_in_simulation false [get_files  H:/Vivado_fpga/PROJECTS/Finite_State_Machine_Traffic_Light/Finite_State_Machine_Traffic_Light.srcs/sources_1/new/traffic_light_fsm.sv]
+set_property used_in_implementation false [get_files  H:/Vivado_fpga/PROJECTS/Finite_State_Machine_Traffic_Light/Finite_State_Machine_Traffic_Light.srcs/sim_1/new/tb_traffic_light_fsm.sv]
+update_compile_order -fileset sources_1
+update_compile_order -fileset sim_1
+set_property used_in_synthesis false [get_files  H:/Vivado_fpga/PROJECTS/Finite_State_Machine_Traffic_Light/Finite_State_Machine_Traffic_Light.srcs/sim_1/new/tb_traffic_light_fsm.sv]
+launch_simulation
+reset_simulation -simset sim_1 -mode behavioral
+launch_simulation
+launch_simulation
+set_property file_type Verilog [get_files  H:/Vivado_fpga/PROJECTS/Finite_State_Machine_Traffic_Light/Finite_State_Machine_Traffic_Light.srcs/sources_1/new/traffic_light_fsm.sv]
+set_property file_type Verilog [get_files  H:/Vivado_fpga/PROJECTS/Finite_State_Machine_Traffic_Light/Finite_State_Machine_Traffic_Light.srcs/sim_1/new/tb_traffic_light_fsm.sv]
+launch_simulation
+source tb_traffic_light_fsm.tcl
+close_sim
